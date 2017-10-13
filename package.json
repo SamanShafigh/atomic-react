@@ -1,0 +1,29 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "glamor": "2.20.40",
+    "react": "^16.0.0",
+    "react-bootstrap": "0.31.3",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "4.2.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "enzyme": "3.1.0",
+    "jest": "21.2.1",
+    "prop-types": "15.6.0",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  }
+}
