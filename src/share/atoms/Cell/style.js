@@ -1,61 +1,33 @@
-import { COLOR } from '../../../config/Theme';
 import { css } from 'glamor'
 
-const widthSize = {
-  large: '100%',
-  medium: '12.5rem',
-  small: '10rem',
-  default: '12.5rem'
-}
-
 /**
  *
- * @param size
+ * @param styles
  * @returns {*}
  */
-const baseStyle = (size) => {
-  return css({
-    position: 'relative',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '2.75rem',
-    width: widthSize[size],
-    /* allow buttons to extend vertically */
-    padding: '0.33rem 1rem',
-    borderRadius: '2px',
-    border: `1px solid ${COLOR.ORANGE}`,
-    background: COLOR.WHITE,
-    color: COLOR.ORANGE,
-    cursor: 'pointer',
-    fontWeight: 400,
-    ':hover': {
-      boxShadow: `0 0 0 1px ${COLOR.ORANGE}`,
-    },
-  });
-}
+const baseStyle = (options) => {
+  const styles = Object.keys(options).reduce((p, c) => {
+    const value = options[c];
+    if (!value) return p;
 
-/**
- *
- * @param disabled
- * @returns {*}
- */
-const disabledStyle = (disabled) => {
-  if (disabled) {
-    return css({
-      background: COLOR.GRAY,
-      cursor: 'not-allowed',
-      color: COLOR.WHITE,
-      border: `1px solid ${COLOR.WHITE}`,
-      ':hover': {
-        boxShadow: 'none',
-        borderColor: COLOR.WHITE,
-        color: COLOR.WHITE,
-      },
-    });
-  }
-  return null;
-}
+    if (c === 'size') {
+      return Object.assign(p, {
+        flexGrow: value,
+        flexShrink: 12 / parseInt(value, 10),
+      });
+    }
+
+    return Object.assign(p, { [c]: value });
+  }, {});
+
+  return css(
+    Object.assign({}, styles, {
+      label: 'cell',
+      display: 'flex',
+      width: '100%',
+    })
+  );
+};
 
 /**
  *
@@ -63,6 +35,6 @@ const disabledStyle = (disabled) => {
  * @param isInactive
  * @returns {*}
  */
-export const getStyle = (size = 'default', disabled = false) => {
-  return css(baseStyle(size), disabledStyle(disabled));
+export const getStyle = (options) => {
+  return css(baseStyle(options));
 };

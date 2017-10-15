@@ -1,17 +1,12 @@
 import React from 'react';
 import UserItem from '../components/User/UserItem';
-import { USERS } from '../fixtures/UserFixtures';
 
-class UsersList extends React.Component {
+class Network extends React.Component {
   constructor() {
     super();
     this.state = {
       users: []
     }
-  }
-
-  componentDidMount() {
-    this.setState({users: USERS });
   }
 
   render() {
@@ -26,4 +21,4 @@ class UsersList extends React.Component {
   }
 }
 
-export default UsersList;
+export default Network;

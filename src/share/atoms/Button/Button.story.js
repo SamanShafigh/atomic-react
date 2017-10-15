@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button from './';
 
-const buttonStory = storiesOf('Button', module);
+const story = storiesOf('Button', module);
 
-buttonStory.add('sizes', () => (
+story.add('sizes', () => (
   <div>
     <div>
       <Button onClick={() => {}}>
@@ -27,7 +27,7 @@ buttonStory.add('sizes', () => (
   </div>
 ));
 
-buttonStory.add('active/disable', () => (
+story.add('active/disable', () => (
   <div>
     <div>
       <Button type="primary" onClick={() => {}}>

@@ -4,23 +4,26 @@ import { getStyle } from './style.js';
 
 const Cell = ({
   children,
-  type,
-  size
+  ...styleProps
 }) => (
-  <div className={getStyle(size)}>
+  <div className={getStyle(styleProps)}>
     {children}
   </div>
 );
 
 Cell.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.string,
-  size: PropTypes.string,
+  alignItems: PropTypes.string,
+  justifyContent: PropTypes.string,
+  flexDirection: PropTypes.string,
+  size: PropTypes.number,
 }
 
 Cell.defaultProps = {
-  type: 'default',
-  size: 'medium',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'row',
+  size: null,
 }
 
 export default Cell;

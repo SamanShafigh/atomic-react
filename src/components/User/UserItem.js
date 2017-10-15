@@ -9,9 +9,10 @@ const UserItem = ({user}) => (
 
 UserItem.propTypes = {
   user: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
+    img: PropTypes.string,
   }),
 }
 

@@ -1,36 +1,30 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { Router, Route, IndexRoute } from 'react-router';
+import { Provider } from 'react-redux';
 
-import Button from '../share/atoms/Button';
-import container from '../Container';
-import UsersList from './UsersList'
+// Import story
+import store, { history } from '../redux/store';
 
-const components = ['A', 'B', 'C'];
+// Import containers
+import Dashboard from './Dashboard';
+import Home from './Home';
+import Profile from './Profile';
+import Network from './Network';
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Button size="small" onClick={() => {}}>Click on me</Button>
+      <Provider store={store}>
+        <Router history={history}>
 
-          <ul>
-            <li><Link to="/users">Users</Link></li>
-          </ul>
+          <Route path="/" component={Dashboard}>
+            <IndexRoute component={Home}></IndexRoute>
+            <Route path="/network/:userId" component={Network}></Route>
+            <Route path="/profile/:userId" component={Profile}></Route>
+          </Route>
 
-          {components.map((componentId) => {
-            let Component = container.get(componentId);
-
-            return <Component>{componentId}</Component>;
-          })}
-
-          <Route path="/users" component={UsersList}/>
-        </div>
-      </Router>
+        </Router>
+      </Provider>
     );
   }
 }
