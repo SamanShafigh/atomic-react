@@ -13,12 +13,14 @@
     "redux": "^3.5.2"
   },
   "devDependencies": {
+    "react-scripts": "0.9.5",
     "@storybook/react": "^3.2.8",
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
     "enzyme": "3.1.0",
     "jest": "21.2.1",
     "prop-types": "15.6.0",
-    "react-icons-kit": "1.0.7",
-    "react-scripts": "1.0.14"
+    "react-icons-kit": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

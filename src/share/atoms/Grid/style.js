@@ -5,12 +5,13 @@ import { css } from 'glamor'
  * @param direction
  * @returns {*}
  */
-const baseStyle = (direction) => {
+const baseStyle = (direction, justify) => {
   return css({
     label: 'grid-container',
     display: 'flex',
     height: '100%',
     flexDirection: direction,
+    justifyContent: justify,
     flexGrow: 1,
   });
 }
@@ -20,6 +21,6 @@ const baseStyle = (direction) => {
  * @param direction
  * @returns {*}
  */
-export const getStyle = (direction) => {
-  return css(baseStyle(direction));
+export const getStyle = (direction, justify) => {
+  return css(baseStyle(direction, justify));
 };

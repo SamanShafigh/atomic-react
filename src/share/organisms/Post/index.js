@@ -1,21 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getStyle, getPostStyle } from './style.js';
+import { getPostStyle, getPostFooterStyle } from './style.js';
 
 import Grid from '../../atoms/Grid';
 import Cell from '../../atoms/Cell';
-import ProfileImage from '../../molecules/ProfileImage';
+import ProfileInfo from '../../molecules/SmallProfileInfo';
+import Icon from '../../atoms/Icon';
 
 const Post = ({post}) => (
-  <div className={getStyle()}>
+  <div>
     <Grid>
       <Cell>
-        <ProfileImage url={post.user.img} size="small" />
+        <ProfileInfo
+          name={post.user.name}
+          img={post.user.img}
+          email={post.user.email}
+        />
       </Cell>
     </Grid>
     <Grid>
-      <Cell className={getPostStyle()}>
-        {post.summary}
+      <Cell>
+        <span className={getPostStyle()}>{post.summary}</span>
+      </Cell>
+    </Grid>
+    <Grid>
+      <Cell>
+        <span className={getPostFooterStyle()}>{post.likes} Likes</span>
+      </Cell>
+    </Grid>
+    <Grid>
+      <Cell size="1">
+        <Icon name="ic_thumb_up">Like</Icon>
+        <Icon name="ic_comment">Comment</Icon>
       </Cell>
     </Grid>
   </div>

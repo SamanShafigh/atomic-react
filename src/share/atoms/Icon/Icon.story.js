@@ -29,7 +29,7 @@ story.add('color', () => (
 story.add('type', () => (
   <div>
     {Object.keys(icons).map((icon) => (
-      <Icon size="33" name={icon} />
+       <Icon size="33" name={icon} title={icon} />
     ))}
   </div>
 ));

@@ -22,6 +22,13 @@ const baseStyle = (options) => {
 
   return css(
     Object.assign({}, styles, {
+      fontFamily: 'sans-serif',
+      flexBasis: 'auto',
+      alignSelf: 'center',
+      justifyContent: 'flex-start',
+      margin: '2px',
+      fontSize: '14px',
+      color: '#424242',
       label: 'cell',
       display: 'flex',
       width: '100%',
