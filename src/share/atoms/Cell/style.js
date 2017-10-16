@@ -26,12 +26,11 @@ const baseStyle = (options) => {
       flexBasis: 'auto',
       alignSelf: 'center',
       justifyContent: 'flex-start',
-      margin: '2px',
+      margin: '1px',
       fontSize: '14px',
       color: '#424242',
       label: 'cell',
       display: 'flex',
-      width: '100%',
     })
   );
 };

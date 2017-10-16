@@ -13,7 +13,7 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   direction: 'row',
-  justify: 'flex-start'
+  justify: 'flex-start' // flex-start | flex-end | center | space-between | space-around | space-evenly
 };
 
 export default Grid;

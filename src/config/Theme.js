@@ -27,3 +27,7 @@ export const FONT_SIZE = {
 export const BUTTON_SIZE = {
 
 }
+
+export const PANEL = {
+  BORDER: '#C8C8C8'
+}
