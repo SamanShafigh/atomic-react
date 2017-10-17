@@ -12,6 +12,7 @@ export const getPanelStyle = () => {
 
 export const getPanelTitleStyle = () => {
   return css({
-    fontSize: '18px'
+    fontSize: '18px',
+    paddingBottom: '20px'
   });
 }

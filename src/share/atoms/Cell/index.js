@@ -13,6 +13,7 @@ const Cell = ({
 
 Cell.propTypes = {
   children: PropTypes.node.isRequired,
+  width: PropTypes.string,
   alignItems: PropTypes.string,
   justifyContent: PropTypes.string,
   flexDirection: PropTypes.string,
@@ -20,8 +21,9 @@ Cell.propTypes = {
 }
 
 Cell.defaultProps = {
+  width: '100%',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
   flexDirection: 'row',
   size: null,
 }

@@ -1,27 +1,28 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import ProfileImage from './';
+import user from '../../../fixtures/user';
 
 const story = storiesOf('Profile Image', module);
 
 story.add('default', () => (
   <div>
-    <ProfileImage url="static/profile/profile-smal_03.gif" />
-    <ProfileImage url="static/profile/profile-smal_21.gif" />
-    <ProfileImage url="static/profile/profile-smal_04.gif" />
-    <ProfileImage url="static/profile/profile-smal_23.gif" />
-    <ProfileImage url="static/profile/profile-smal_12.gif" />
-    <ProfileImage url="static/profile/profile-smal_25.gif" />
-    <ProfileImage url="static/profile/profile-smal_27.gif" />
+    <ProfileImage url="static/profile/a.jpg" />
+    <ProfileImage url="static/profile/b.jpg" />
+    <ProfileImage url="static/profile/c.jpg" />
+    <ProfileImage url="static/profile/d.jpg" />
+    <ProfileImage url="static/profile/e.jpg" />
+    <ProfileImage url="static/profile/f.jpg" />
+    <ProfileImage url="static/profile/g.jpg" />
   </div>
 ));
 
 
 story.add('size', () => (
   <div>
-    <ProfileImage url="static/profile/profile-smal_20.gif" size="small" />
-    <ProfileImage url="static/profile/profile-smal_20.gif" />
-    <ProfileImage url="static/profile/profile-smal_20.gif" size="medium" />
-    <ProfileImage url="static/profile/profile-smal_20.gif" size="large" />
+    <ProfileImage url="static/profile/g.jpg" size="small" />
+    <ProfileImage url="static/profile/g.jpg" />
+    <ProfileImage url="static/profile/g.jpg" size="medium" />
+    <ProfileImage url="static/profile/g.jpg" size="large" />
   </div>
 ));

@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from "../../share/organisms/Post";
 
-const Posts = ({posts}) => (
+const Posts = ({ posts }) => (
   <div>
-    {posts.map((post) => <Post post={post} key={post.id} />)}
+    {posts.map((post) => (
+      <Post post={post} key={post.id} />
+    ))}
   </div>
 );
 

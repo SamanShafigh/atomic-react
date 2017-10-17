@@ -1,5 +1,9 @@
 import React from 'react';
-import UserProfileHeader from '../components/User/UserProfileHeader';
+import { connect } from 'react-redux';
+
+import Connections from '../components/User/Connections';
+import Experiences from '../components/User/Experiences';
+import Recommendations from '../components/User/Recommendations';
 
 class Profile extends React.Component {
   constructor() {
@@ -10,13 +14,23 @@ class Profile extends React.Component {
   }
 
   render() {
+    const user = this.props.profile;
+
     return (
       <div>
-        This is profile page
-        <UserProfileHeader />
+        <Connections friends={ user.friends } />
+        <Experiences experiences={ user.experiences } />
+        <Recommendations recommendations={ user.recommendations } />
       </div>
     );
   }
 }
 
-export default Profile;
+const mapStateToProps = state => ({
+  profile: state.profile,
+});
+
+const mapDispatchToProps = {
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

@@ -8,7 +8,7 @@ const posts = [
       id: 'sina',
       name: 'Sina',
       email: 'sina@gmail.com',
-      img: 'static/profile/profile-smal_40.gif'
+      img: 'static/profile/f.jpg'
     },
   },
   {
@@ -20,7 +20,7 @@ const posts = [
       id: 'verica',
       name: 'Verica',
       email: 'verica@gmail.com',
-      img: 'static/profile/profile-smal_47.gif'
+      img: 'static/profile/a.jpg'
     },
   },
   {
@@ -32,7 +32,7 @@ const posts = [
       id: 'shayan',
       name: 'Shayan',
       email: 'shayan@gmail.com',
-      img: 'static/profile/profile-smal_03.gif'
+      img: 'static/profile/c.jpg'
     },
   },
   {
@@ -44,7 +44,7 @@ const posts = [
       id: 'dave',
       name: 'Dave',
       email: 'dave@gmail.com',
-      img: 'static/profile/profile-smal_39.gif'
+      img: 'static/profile/d.jpg'
     },
   },
   {
@@ -56,7 +56,7 @@ const posts = [
       id: 'faraz',
       name: 'Faraz',
       email: 'faraz@gmail.com',
-      img: 'static/profile/profile-smal_37.gif'
+      img: 'static/profile/e.jpg'
     },
   },
   {
@@ -68,7 +68,7 @@ const posts = [
       id: 'chao',
       name: 'Chao',
       email: 'chao@gmail.com',
-      img: 'static/profile/profile-smal_11.gif'
+      img: 'static/profile/b.jpg'
     },
   },
   {
@@ -80,7 +80,7 @@ const posts = [
       id: 'chao',
       name: 'Chao',
       email: 'chao@gmail.com',
-      img: 'static/profile/profile-smal_11.gif'
+      img: 'static/profile/b.jpg'
     },
   },
 ];

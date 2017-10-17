@@ -18,13 +18,15 @@ const getSize = (size) => {
 
 const ProfileImage = ({
   url,
-  size
+  size,
+  title
 }) => (
-  <span className={getStyle(url, getSize(size))} />
+  <span className={getStyle(url, getSize(size))} title={title} />
 );
 
 ProfileImage.propTypes = {
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string,
   size: PropTypes.string,
 }
 

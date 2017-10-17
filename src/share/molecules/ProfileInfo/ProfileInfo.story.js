@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import ProfileInfo from './';
 import user from '../../../fixtures/user';
+import ProfileInfo from './';
 
-const story = storiesOf('Default Profile Info', module);
+const story = storiesOf('Small Profile Info', module);
 
 story.add('default', () => (
   <div>
@@ -11,9 +11,6 @@ story.add('default', () => (
       name={user.name}
       img={user.img}
       email={user.email}
-      location={user.location}
-      connection={user.connection}
-      summary={user.summary}
     />
   </div>
 ));

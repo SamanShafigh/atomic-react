@@ -7,7 +7,7 @@ const post = {
     id: 'sina',
     name: 'Sina',
     email: 'sina@gmail.com',
-    img: 'static/profile/profile-smal_40.gif'
+    img: 'static/profile/g.jpg'
   },
 };
 

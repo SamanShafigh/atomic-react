@@ -1,5 +1,5 @@
 import React from 'react';
-import UserItem from '../components/User/UserItem';
+import ProfileInfo from '../share/molecules/ProfileInfo'
 
 class Network extends React.Component {
   constructor() {
@@ -14,7 +14,7 @@ class Network extends React.Component {
       <div>
         User list
         {this.state.users.map((user, index) => (
-          <UserItem key={index} user={user} />
+          <ProfileInfo key={index} user={user} />
         ))}
       </div>
     );

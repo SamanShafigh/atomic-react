@@ -12,10 +12,16 @@ export const getUserNameStyle = () => {
   });
 };
 
-export const getUserSummaryStyle = () => {
+export const getUserEmailStyle = () => {
   return css({
     display: 'block',
-    textAlign: 'center',
-    color: '#888888',
+    fontWeight: 'normal',
+    color: '#A8A8A8'
   });
 };
+
+export const getUserInfoStyle = () => {
+  return css({
+    paddingLeft: '10px',
+  });
+}

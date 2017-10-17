@@ -12,13 +12,12 @@ const baseStyle = (url, size) => {
     height: `${size}px`,
     margin: "1em auto",
     backgroundImage: `url(${url})`,
-    backgroundSize: "70%",
+    backgroundSize: "100%",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "50% 80%",
     '-webkit-border-radius': "99em",
     '-moz-border-radius': "99em",
     borderRadius: "99em",
-    border: `${(size * 0.04)}px solid #eee`,
+    border: `${(size * 0.03)}px solid #eee`,
     boxShadow: "0 3px 5px rgba(0, 0, 0, 0.3)",
   });
 }

@@ -16,3 +16,10 @@ export function likePost(postId) {
     postId,
   }
 }
+
+// fetch posts
+export function fetchPosts() {
+  return {
+    type: Actions.POST_FETCH_POSTS,
+  }
+}

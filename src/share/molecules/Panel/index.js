@@ -7,7 +7,7 @@ import Cell from '../../atoms/Cell';
 
 const Panel = ({
   children,
-                 title,
+  title,
   summary
 }) => (
   <div className={getPanelStyle()}>

@@ -1,27 +1,23 @@
 const profile = {
   id: 'saman',
   name: 'Saman',
-  img: 'static/profile/profile-smal_20.gif',
+  img: 'static/profile/g.jpg',
   location: "Sydney, Australia",
   connection: 500,
-  summary: "I have worked in the recruitment industry for 10 years, ultimately gaining experience in B2B sales, talent marketing, human resources practices, sourcing and recruiting at a variety of levels. As a recruiter, I take pride in ensuring that placements are a strong match for all parties - I'm interested in finding people careers rather than simply jobs.",
+  summary: "I have worked in the recruitment industry for 10 years, ultimately gaining experience in B2B sales, talent marketing, human resources practices, sourcing and recruiting at a variety of levels. As a recruiter, I take pride in ensuring that placements are a strong match for all parties.",
   email: 'samanshafigh@gmail.com',
   friends: [
-    {id: 'sina', name: 'Sina', email: 'sina@gmail.com', img: 'static/profile/profile-smal_40.gif'},
-    {id: 'omar', name: 'Omar', email: 'omar@gmail.com', img: 'static/profile/profile-smal_31.gif'},
-    {id: 'verica', name: 'Verica', email: 'verica@gmail.com', img: 'static/profile/profile-smal_47.gif'},
-    {id: 'dave', name: 'Dave', email: 'dave@gmail.com', img: 'static/profile/profile-smal_39.gif'},
-    {id: 'shayan', name: 'Shayan', email: 'shayan@gmail.com', img: 'static/profile/profile-smal_03.gif'},
-    {id: 'faraz', name: 'Faraz', email: 'faraz@gmail.com', img: 'static/profile/profile-smal_37.gif'},
-    {id: 'ronak', name: 'Ronak', email: 'ronak@gmail.com', img: 'static/profile/profile-smal_32.gif'},
-    {id: 'chao', name: 'Chao', email: 'chao@gmail.com', img: 'static/profile/profile-smal_11.gif'},
-    {id: 'asha', name: 'Asha', email: 'chao@gmail.com', img: 'static/profile/profile-smal_09.gif'},
+    {id: 'sina', name: 'Sina', email: 'sina@gmail.com', img: 'static/profile/a.jpg'},
+    {id: 'omar', name: 'Omar', email: 'omar@gmail.com', img: 'static/profile/i.jpg'},
+    {id: 'verica', name: 'Verica', email: 'verica@gmail.com', img: 'static/profile/c.jpg'},
+    {id: 'dave', name: 'Dave', email: 'dave@gmail.com', img: 'static/profile/d.jpg'},
+    {id: 'shayan', name: 'Shayan', email: 'shayan@gmail.com', img: 'static/profile/e.jpg'},
+    {id: 'faraz', name: 'Faraz', email: 'faraz@gmail.com', img: 'static/profile/f.jpg'},
+    {id: 'ronak', name: 'Ronak', email: 'ronak@gmail.com', img: 'static/profile/h.jpg'},
+    {id: 'chao', name: 'Chao', email: 'chao@gmail.com', img: 'static/profile/b.jpg'},
+    {id: 'asha', name: 'Asha', email: 'chao@gmail.com', img: 'static/profile/j.jpg'},
   ],
-  educations: [
-    {id: 1, title: "Doctor of Philosophy (PhD), Computer Science and Engineering", organization: "UNSW Australia"},
-    {id: 2, title: "Bachelor's Degree, Computer Software Engineering", organization: "Charles Sturt University"},
-  ],
-  experience: [
+  experiences: [
     {
       id: 1,
       title: 'Recruiter',
@@ -44,22 +40,22 @@ const profile = {
   recommendations: [
     {
       id: 1,
-      user: {id: 'verica', name: 'Verica', email: 'verica@gmail.com'},
+      user: {id: 'verica', name: 'Verica', email: 'verica@gmail.com', img: 'static/profile/a.jpg'},
       summary: "Rachel was an exceptional and vital member of our team at CORESTAFF. She is highly skilled at working with mid to senior level management and has a talent for finding qualified candidates to fill any role. I really enjoyed working with Rachel and admire her for her dedication and adaptability."
     },
     {
       id: 2,
-      user: {id: 'asha', name: 'Asha', email: 'chao@gmail.com'},
+      user: {id: 'asha', name: 'Asha', email: 'chao@gmail.com', img: 'static/profile/b.jpg'},
       summary: "Rachel – Thank you so much for your kind sentiments! I have always thought of you with very high regard! It was such a pleasure to have had the opportunity to watch you grow into the lovely professional woman you have grown into so well! I wish you the best of luck in your new endeavor! Jeanne."
     },
     {
       id: 3,
-      user: {id: 'chao', name: 'Chao', email: 'verica@gmail.com'},
+      user: {id: 'chao', name: 'Chao', email: 'verica@gmail.com', img: 'static/profile/d.jpg'},
       summary: "Rachel was an exceptional and vital member of our team at CORESTAFF. She is highly skilled at working with mid to senior level management and has a talent for finding qualified candidates to fill any role. I really enjoyed working with Rachel and admire her for her dedication and adaptability."
     },
     {
       id: 4,
-      user: {id: 'ronak', name: 'Ronak', email: 'ronak@gmail.com'},
+      user: {id: 'ronak', name: 'Ronak', email: 'ronak@gmail.com', img: 'static/profile/c.jpg'},
       summary: "Rachel was an exceptional and vital member of our team at CORESTAFF. She is highly skilled at working with mid to senior level management and has a talent for finding qualified candidates to fill any role. I really enjoyed working with Rachel and admire her for her dedication and adaptability."
     },
   ]

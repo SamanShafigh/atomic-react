@@ -4,8 +4,9 @@ import { getPostStyle, getPostFooterStyle } from './style.js';
 
 import Grid from '../../atoms/Grid';
 import Cell from '../../atoms/Cell';
-import ProfileInfo from '../../molecules/SmallProfileInfo';
+import ProfileInfo from '../../molecules/ProfileInfo';
 import Icon from '../../atoms/Icon';
+import Divider from '../../atoms/Divider';
 
 const Post = ({post}) => (
   <div>
@@ -20,7 +21,7 @@ const Post = ({post}) => (
     </Grid>
     <Grid>
       <Cell>
-        <span className={getPostStyle()}>{post.summary}</span>
+        {post.summary}
       </Cell>
     </Grid>
     <Grid>
@@ -32,6 +33,11 @@ const Post = ({post}) => (
       <Cell size="1">
         <Icon name="ic_thumb_up">Like</Icon>
         <Icon name="ic_comment">Comment</Icon>
+      </Cell>
+    </Grid>
+    <Grid>
+      <Cell>
+        <Divider />
       </Cell>
     </Grid>
   </div>
