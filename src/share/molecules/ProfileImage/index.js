@@ -21,7 +21,10 @@ const ProfileImage = ({
   size,
   title
 }) => (
-  <span className={getStyle(url, getSize(size))} title={title}></span>
+  url !== undefined?
+    (<span className={getStyle(url, getSize(size))} title={title}></span>)
+    :
+    (<span></span>)
 );
 
 ProfileImage.propTypes = {

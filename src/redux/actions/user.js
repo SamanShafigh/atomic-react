@@ -1,5 +1,5 @@
 import Actions from '../../lib/constants/Actions';
-import mockUser from '../../fixtures/user';
+import { asyncFetchUser } from '../../apis/UserApi';
 
 // user is fetched
 export function userFetched(user) {
@@ -9,7 +9,13 @@ export function userFetched(user) {
   }
 }
 
-// fetch user
+export function closeUserModal() {
+  return {
+    type: Actions.USER_CLOSE_USER_MODAL,
+  }
+}
+
+// async action to fetch user
 export function fetchUser(userId) {
   return (dispatch) => {
     dispatch({
@@ -17,8 +23,6 @@ export function fetchUser(userId) {
       userId
     });
 
-    setTimeout(() => {
-      userFetched(mockUser)
-    }, 500);
+    asyncFetchUser(userId, (user) => dispatch(userFetched(user)));
   };
 }

@@ -7,6 +7,7 @@ import Cell from '../../atoms/Cell';
 import ProfileInfo from '../../molecules/ProfileInfo';
 import Icon from '../../atoms/Icon';
 import Divider from '../../atoms/Divider';
+import Loading from '../../atoms/Loading';
 
 const Post = ({post}) => (
   <div>
@@ -21,7 +22,10 @@ const Post = ({post}) => (
     </Grid>
     <Grid>
       <Cell>
-        <span className={getPostStyle()}>{post.summary}</span>
+        <span className={getPostStyle()}>
+          {post.summary}
+          <Loading isLoading={post.isPosting} />
+        </span>
       </Cell>
     </Grid>
     <Grid>
@@ -48,12 +52,17 @@ Post.propTypes = {
   summary: PropTypes.string,
   img: PropTypes.string,
   likes: PropTypes.number,
+  isPosting: PropTypes.bool,
   user: PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
     img: PropTypes.string,
   }),
+}
+
+Post.defaultProps = {
+  isPosting: false
 }
 
 export default Post;

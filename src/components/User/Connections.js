@@ -4,7 +4,7 @@ import Panel from '../../share/molecules/Panel';
 import Connection from '../../share/molecules/Connection';
 
 const Connections = ({ friends }) => (
-  <Panel title="Connections">
+  <Panel title="Connections" icon="ic_group">
     {friends.map((user) => (
       <Connection name={user.name} img={user.img} key={user.id} />
     ))}

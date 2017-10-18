@@ -9,6 +9,14 @@ const text = "This defines the alignment along the main axis. It helps distribut
 
 story.add('default', () => (
   <div>
+    <Panel title="Experience" icon="ic_face">
+      {text}
+    </Panel>
+  </div>
+));
+
+story.add('default without icon', () => (
+  <div>
     <Panel title="Experience">
       {text}
     </Panel>
@@ -17,7 +25,7 @@ story.add('default', () => (
 
 story.add('with posts', () => (
   <div>
-    <Panel title="Experience">
+    <Panel title="Experience" icon="ic_face">
       {posts.map((post) => (
         <Post post={post} />
       ))}

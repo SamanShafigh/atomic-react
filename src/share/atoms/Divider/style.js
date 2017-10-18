@@ -11,7 +11,7 @@ const baseStyle = (options) => {
       border: '0',
       height: '1px',
       background: '#eee',
-      backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))'
+      backgroundImage: 'linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0)'
   });
 };
 

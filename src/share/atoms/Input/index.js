@@ -8,7 +8,7 @@ const Input = ({
   size,
   disabled = false,
 }) => (
-  <input onChange={onChange} value={value} className={getStyle(size, disabled)} />
+  <input onChange={(e) => onChange(e)} value={value} className={getStyle(size, disabled)} />
 );
 
 Input.propTypes = {

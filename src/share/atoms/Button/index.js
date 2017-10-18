@@ -9,7 +9,7 @@ const Button = ({
   size,
   disabled = false,
 }) => (
-  <button onClick={onClick} className={getStyle(size, disabled)}>
+  <button type={type} onClick={onClick} className={getStyle(size, disabled)}>
     {children}
   </button>
 );
@@ -23,7 +23,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  type: 'default',
+  type: 'submit',
   size: 'medium',
   disabled: false
 }

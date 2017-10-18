@@ -4,7 +4,7 @@ import Panel from '../../share/molecules/Panel';
 import Recommendation from '../../share/organisms/Recommendation';
 
 const Recommendations = ({ recommendations }) => (
-  <Panel title="Recommendations">
+  <Panel title="Recommendations" icon="ic_card_giftcard">
     {recommendations.map((recommendation) => (
       <Recommendation recommendation={recommendation} key={recommendation.id} />
     ))}

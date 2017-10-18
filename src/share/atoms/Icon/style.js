@@ -3,7 +3,6 @@ import { css } from 'glamor'
 export const getTextStyle = () => {
   return css({
     verticalAlign: 'super',
-    color: 'red',
   });
 }
 

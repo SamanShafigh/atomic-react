@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getUserContainerStyle, getUserNameStyle, getUserImageStyle } from './style.js';
+import {
+  getUserContainerStyle,
+  getUserNameStyle,
+  getUserImageStyle,
+  getUserNameLinkStyle
+} from './style.js';
 
 import ProfileImage from '../ProfileImage';
 
@@ -15,7 +20,9 @@ const User = ({
       <ProfileImage url={img} title={name} />
     </div>
     <div className={getUserNameStyle()}>
-      <a onClick={() => fetchUser(id)}>{name}</a>
+      <a className={getUserNameLinkStyle()} onClick={() => fetchUser(id)}>
+        {name}
+      </a>
     </div>
   </div>
 );

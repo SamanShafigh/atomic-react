@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "0.16.2",
     "glamor": "2.20.40",
     "immutable": "3.8.2",
     "react": "^15.5.4",
@@ -10,17 +11,18 @@
     "react-redux": "^5.0.5",
     "react-router": "3.0.2",
     "react-router-redux": "^4.0.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5",
-    "@storybook/react": "^3.2.8",
     "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-links": "^3.2.6",
+    "@storybook/react": "^3.2.8",
     "enzyme": "3.1.0",
     "jest": "21.2.1",
     "prop-types": "15.6.0",
-    "react-icons-kit": "1.0.7"
+    "react-icons-kit": "1.0.7",
+    "react-scripts": "0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +33,3 @@
     "build-storybook": "build-storybook -s public"
   }
 }
-
-

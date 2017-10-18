@@ -21,6 +21,12 @@ export const getUserNameStyle = () => {
   });
 }
 
+export const getUserNameLinkStyle = () => {
+  return css({
+    cursor: 'pointer',
+  });
+}
+
 export const getUserImageStyle = () => {
   return css({
     textAlign: 'center',

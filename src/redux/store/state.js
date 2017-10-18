@@ -4,11 +4,14 @@ import posts from '../../fixtures/posts';
 
 // create an object for the default data
 const state = {
-  loading: false,
-  user: {},
+  user: {
+    loading: false,
+    loaded: false,
+    data: {}
+  },
   profile,
   network,
-  posts
+  posts,
 };
 
 export default state;

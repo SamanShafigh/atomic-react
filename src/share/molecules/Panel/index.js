@@ -4,16 +4,19 @@ import { getPanelStyle, getPanelTitleStyle } from './style.js';
 
 import Grid from '../../atoms/Grid';
 import Cell from '../../atoms/Cell';
+import Icon from '../../atoms/Icon';
 
 const Panel = ({
   children,
   title,
-  summary
+  icon
 }) => (
   <div className={getPanelStyle()}>
     <Grid>
       <Cell>
-        <div className={getPanelTitleStyle()}>{title}</div>
+        <div className={getPanelTitleStyle()}>
+          {icon !== undefined? <Icon name={icon} size={30}>{title}</Icon> : title }
+        </div>
       </Cell>
     </Grid>
     <Grid>
@@ -29,7 +32,7 @@ const Panel = ({
 Panel.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string.isRequired,
-  summary: PropTypes.string,
+  icon: PropTypes.string
 }
 
 export default Panel;

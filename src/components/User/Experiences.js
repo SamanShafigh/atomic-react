@@ -4,7 +4,7 @@ import Panel from '../../share/molecules/Panel';
 import Experience from '../../share/organisms/Experience';
 
 const Experiences = ({ experiences }) => (
-  <Panel title="Experiences">
+  <Panel title="Experiences" icon="ic_school">
     {experiences.map((experience) => (
       <Experience experience={experience} key={experience.id} />
     ))}
