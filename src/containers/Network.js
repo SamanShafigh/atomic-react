@@ -1,5 +1,7 @@
 import React from 'react';
-import ProfileInfo from '../share/molecules/ProfileInfo'
+import { connect } from 'react-redux';
+import { fetchUser } from '../redux/actions/user';
+import Users from '../components/Network/Users';
 
 class Network extends React.Component {
   constructor() {
@@ -12,13 +14,18 @@ class Network extends React.Component {
   render() {
     return (
       <div>
-        User list
-        {this.state.users.map((user, index) => (
-          <ProfileInfo key={index} user={user} />
-        ))}
+          <Users users={this.props.users} fetchUser={this.props.fetchUser} />
       </div>
     );
   }
 }
 
-export default Network;
+const mapStateToProps = state => ({
+  users: state.network,
+});
+
+const mapDispatchToProps = {
+  fetchUser
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Network);

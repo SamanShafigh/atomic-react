@@ -1,13 +1,12 @@
 import Actions from '../../lib/constants/Actions';
 
-function profile(state = [], action) {
+function profile(state = {}, action) {
   switch(action.type) {
-    case Actions.USER_FETCH_PROFILE :
-
+    case Actions.PROFILE_FETCH_USER :
+      return state;
+    default:
       return state;
   }
-
-  return state;
 }
 
 export default profile;

@@ -12,12 +12,15 @@ const Cell = ({
 );
 
 Cell.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   width: PropTypes.string,
   alignItems: PropTypes.string,
   justifyContent: PropTypes.string,
   flexDirection: PropTypes.string,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 }
 
 Cell.defaultProps = {

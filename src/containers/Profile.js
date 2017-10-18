@@ -6,13 +6,6 @@ import Experiences from '../components/User/Experiences';
 import Recommendations from '../components/User/Recommendations';
 
 class Profile extends React.Component {
-  constructor() {
-    super();
-  }
-
-  componentDidMount() {
-  }
-
   render() {
     const user = this.props.profile;
 

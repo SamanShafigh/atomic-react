@@ -10,18 +10,18 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Grid>
-          <Cell size="8"></Cell>
+          <Cell size="8" />
           <Cell>
             <Header user={this.props.profile}/>
           </Cell>
-          <Cell size="8"></Cell>
+          <Cell size="8" />
         </Grid>
         <Grid>
-          <Cell size="8"></Cell>
+          <Cell size="8" />
           <Cell>
             {React.cloneElement({...this.props}.children, {...this.props})}
           </Cell>
-          <Cell size="8"></Cell>
+          <Cell size="8" />
         </Grid>
       </div>
     );

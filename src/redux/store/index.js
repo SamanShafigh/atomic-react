@@ -1,22 +1,13 @@
-import { createStore, compse } from 'redux';
+import { createStore } from 'redux';
 import { syncHistoryWithStore} from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
 // import the root reducer
 import rootReducer from '../reducers/index';
+// import initial state of the app
+import state from './state';
 
-import network from '../../fixtures/network';
-import profile from '../../fixtures/profile';
-import posts from '../../fixtures/posts';
-
-// create an object for the default data
-const initState = {
-  profile,
-  network,
-  posts
-};
-
-const store = createStore(rootReducer, initState);
+const store = createStore(rootReducer, state);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

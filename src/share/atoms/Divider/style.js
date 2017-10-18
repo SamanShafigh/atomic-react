@@ -8,7 +8,6 @@ import { css } from 'glamor'
 const baseStyle = (options) => {
   return css({
       width: '95%',
-      border: '1px solid',
       border: '0',
       height: '1px',
       background: '#eee',

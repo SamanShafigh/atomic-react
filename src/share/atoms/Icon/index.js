@@ -50,7 +50,10 @@ const Icon = ({
 Icon.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   title: PropTypes.string,
   color: PropTypes.string,
 }

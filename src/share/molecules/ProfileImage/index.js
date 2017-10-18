@@ -21,7 +21,7 @@ const ProfileImage = ({
   size,
   title
 }) => (
-  <span className={getStyle(url, getSize(size))} title={title} />
+  <span className={getStyle(url, getSize(size))} title={title}></span>
 );
 
 ProfileImage.propTypes = {

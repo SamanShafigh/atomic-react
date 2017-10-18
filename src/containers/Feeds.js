@@ -2,15 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../redux/actions/posts'
 
-import Panel from '../share/molecules/Panel';
 import Posts from '../components/Post/Posts';
+import WritePost from '../components/Post/WritePost';
 
 class Feeds extends React.Component {
   render() {
     return (
-      <Panel title="Experience">
+      <div>
+        <WritePost />
         <Posts posts={this.props.posts} />
-      </Panel>
+      </div>
     );
   }
 }

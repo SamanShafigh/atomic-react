@@ -1,0 +1,10 @@
+.write-post-input {
+  float: left;
+  width: 410px;
+}
+
+.write-post-button {
+  float: left;
+  padding-left: 10px;
+  width: 150px;
+}

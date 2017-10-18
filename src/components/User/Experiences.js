@@ -12,12 +12,13 @@ const Experiences = ({ experiences }) => (
 );
 
 Experiences.propTypes = {
-  experiences: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    summary: PropTypes.string,
-    date: PropTypes.string,
-  })
+  experiences: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      summary: PropTypes.string,
+      date: PropTypes.string,
+    }))
 }
 
 export default Experiences;

@@ -6,12 +6,15 @@ import { css } from 'glamor'
  * @returns {*}
  */
 const baseStyle = (url, size) => {
+  // TODO: I am sure this is bad but it is just for test
+  const image = require(`../../../../public/${url}`);
+
   return css({
     display: "inline-flex",
     width: `${size}px`,
     height: `${size}px`,
     margin: "1em auto",
-    backgroundImage: `url(${url})`,
+    backgroundImage: `url(${image})`,
     backgroundSize: "100%",
     backgroundRepeat: "no-repeat",
     '-webkit-border-radius': "99em",

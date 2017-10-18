@@ -12,16 +12,17 @@ const Recommendations = ({ recommendations }) => (
 );
 
 Recommendations.propTypes = {
-  recommendations: PropTypes.shape({
-    id: PropTypes.string,
-    summary: PropTypes.string,
-    user: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-    }),
-  }),
+  recommendations: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      summary: PropTypes.string,
+      user: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        img: PropTypes.string.isRequired,
+      }),
+    })),
 }
 
 export default Recommendations;

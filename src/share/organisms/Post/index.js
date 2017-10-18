@@ -21,7 +21,7 @@ const Post = ({post}) => (
     </Grid>
     <Grid>
       <Cell>
-        {post.summary}
+        <span className={getPostStyle()}>{post.summary}</span>
       </Cell>
     </Grid>
     <Grid>

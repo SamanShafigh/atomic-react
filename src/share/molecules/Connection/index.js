@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getConnectionStyle } from './style.js';
-
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
 import ProfileImage from '../ProfileImage';
 
 const Connection = ({

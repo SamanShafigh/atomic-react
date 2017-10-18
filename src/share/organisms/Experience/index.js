@@ -29,7 +29,7 @@ const Experience = ({ experience }) => (
 
 Experience.propTypes = {
   experience: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     summary: PropTypes.string,
     date: PropTypes.string,

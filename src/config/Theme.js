@@ -12,20 +12,17 @@ export const COLOR = {
   },
 }.init();
 
-export const FONT_WEIGHT = {
-  LIGHT: '300',
-  MEDIUM: '400',
-  BOLD: '700',
-};
+export const INPUT = {
+  BORDER: '#C8C8C8',
+  BORDER_SIZE: '1px',
+  BG_COLOR: '#fff',
+  TEXT_COLOR: '#fff'
+}
 
-export const FONT_SIZE = {
-  LARGE: '2rem',
-  SMALL: '0.875rem',
-  X_SMALL: '0.65rem',
-};
-
-export const BUTTON_SIZE = {
-
+export const BUTTON = {
+  BORDER: '#428bca',
+  BG_COLOR: '#428bca',
+  TEXT_COLOR: '#fff'
 }
 
 export const PANEL = {

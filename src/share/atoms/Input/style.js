@@ -1,4 +1,4 @@
-import { COLOR, BUTTON } from '../../../config/Theme';
+import { COLOR, INPUT } from '../../../config/Theme';
 import { css } from 'glamor'
 
 const widthSize = {
@@ -19,20 +19,12 @@ const baseStyle = (size) => {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    //minHeight: '2.75rem',
     height: '40px',
     width: widthSize[size],
-    /* allow buttons to extend vertically */
+    background: INPUT.BG_COLOR,
     padding: '0.33rem 1rem',
+    border: `${INPUT.BORDER_SIZE} solid ${INPUT.BORDER}`,
     borderRadius: '5px',
-    border: `1px solid ${BUTTON.BORDER}`,
-    background: BUTTON.BG_COLOR,
-    color: BUTTON.TEXT_COLOR,
-    cursor: 'pointer',
-    fontWeight: 400,
-    ':hover': {
-      boxShadow: `0 0 0 1px ${BUTTON.BORDER}`,
-    },
   });
 }
 

@@ -1,12 +1,13 @@
 import Actions from '../../lib/constants/Actions';
 
-function posts(state = [], action) {
+function network(state = [], action) {
   switch(action.type) {
-    case Actions.POST_ADD_POST :
+    case Actions.NETWORK_FETCH_USERS :
+
       return state;
     default:
       return state;
   }
 }
 
-export default posts;
+export default network;

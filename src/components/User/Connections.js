@@ -12,12 +12,13 @@ const Connections = ({ friends }) => (
 );
 
 Connections.propTypes = {
-  friends: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    email: PropTypes.string,
-    img: PropTypes.string,
-  }),
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      email: PropTypes.string,
+      img: PropTypes.string,
+    })),
 }
 
 export default Connections;

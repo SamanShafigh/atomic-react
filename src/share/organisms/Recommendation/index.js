@@ -32,7 +32,7 @@ const Recommendation = ({ recommendation }) => (
 
 Recommendation.propTypes = {
   recommendation: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     summary: PropTypes.string,
     user: PropTypes.shape({
       id: PropTypes.string,

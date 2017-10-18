@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { getStyle } from './style.js';
 
-const Grid = ({ children, direction, justify }) => (
-  <div className={getStyle(direction, justify)}>{children}</div>
+const Grid = ({ children, direction, justify, wrap }) => (
+  <div className={getStyle(direction, justify, wrap)}>{children}</div>
 );
 
 Grid.propTypes = {
@@ -13,6 +13,7 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   direction: 'row',
+  wrap: 'nowrap', // nowrap | wrap | wrap-reverse
   justify: 'flex-start' // flex-start | flex-end | center | space-between | space-around | space-evenly
 };
 

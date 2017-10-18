@@ -11,18 +11,19 @@ story.add('sizes', () => (
       <Button onClick={() => {}}>
         Default
       </Button>
+      <br /><br />
     </div>
 
     <div>
       <Button type="primary" size="small" onClick={() => {}}>
         Small
-      </Button>
+      </Button><br /><br />
     </div>
 
     <div>
       <Button type="primary" size="large" onClick={() => {}}>
         Large
-      </Button>
+      </Button><br /><br />
     </div>
   </div>
 ));
