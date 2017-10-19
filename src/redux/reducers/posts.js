@@ -7,12 +7,13 @@ function posts(state = [], action) {
     /**
      * Add a post that user want to post it
      */
-    case Actions.POST_ADD_POST :
+    case Actions.POST_ADD_POST:
       const post = {
         id: action.id,
         summary: action.summary,
         img: "",
         likes: 0,
+        dislike: 0,
         isPosting: true,
         user: {
           id: action.user.id,
@@ -27,17 +28,26 @@ function posts(state = [], action) {
     /**
      * If post was successful then set it to posted
      */
-    case Actions.POST_POST_ADDED :
-      const newPosts = [];
-      for (let i = 0; i < state.length; i++) {
-        const newPost = state[i];
-        if (newPost.id === action.tempId) {
-          newPost.isPosting = false;
+    case Actions.POST_POST_ADDED:
+      return state.map((post) => {
+        if (post.id === action.tempId) {
+          post.isPosting = false;
         }
-        newPosts.push(newPost);
-      }
+        return post;
+      });
 
-      return newPosts;
+    /**
+     * Liking a post
+     */
+    case Actions.POST_LIKE_POST:
+
+      return state.reduce((posts, post) => {
+        if (post.id === action.postId) {
+          post.likes = post.likes + 1;
+        }
+        posts.push(post);
+        return posts;
+      }, []);
 
     default:
       return state;

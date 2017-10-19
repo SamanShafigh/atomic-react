@@ -14,7 +14,7 @@ const Navigation = ({ user }) => (
       <Icon name="ic_face">Profile</Icon>
     </Link>
     <Link to={`/network/${user.id}`} className="navigation-item">
-      <Icon name="ic_supervisor_account">{user.connection}+</Icon>
+      <Icon name="ic_search">Network</Icon>
     </Link>
   </div>
 );

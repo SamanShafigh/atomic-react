@@ -19,10 +19,12 @@
     "@storybook/addon-links": "^3.2.6",
     "@storybook/react": "^3.2.8",
     "enzyme": "3.1.0",
-    "jest": "21.2.1",
+    "jest-glamor-react": "3.1.2",
+    "mocha": "4.0.1",
     "prop-types": "15.6.0",
     "react-icons-kit": "1.0.7",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "react-test-renderer": "16.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +32,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test:jest": "./node_modules/jest/bin/jest.js",
+    "test:mocha": "find . -name '*test.js' | xargs mocha -R spec"
   }
 }

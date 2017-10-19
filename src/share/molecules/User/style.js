@@ -4,12 +4,15 @@ import { css } from 'glamor'
 export const getUserContainerStyle = () => {
   return css({
     border: `1px solid ${PANEL.BORDER}`,
-    padding: '10px',
+    backgroundColor: '#fff',
+    paddingBottom: '20px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
     margin: '5px',
     borderRadius: '3px',
     height: '150px',
     flex: '1',
-    width: '100px',
+    width: '120px',
     boxShadow: "0 1px 5px rgba(0, 0, 0, 0.2)",
   });
 }

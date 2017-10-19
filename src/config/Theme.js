@@ -26,5 +26,5 @@ export const BUTTON = {
 }
 
 export const PANEL = {
-  BORDER: '#C8C8C8'
+  BORDER: '#ababab' //C8C8C8'
 }

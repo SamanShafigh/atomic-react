@@ -10,8 +10,10 @@ import rootReducer from '../reducers/index';
 // import initial state of the app
 import state from './state';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 // Compose a store creator with some middlewares
-const createStoreWithMiddleware = compose(applyMiddleware(thunk))(createStore);
+const createStoreWithMiddleware = composeEnhancers(applyMiddleware(thunk))(createStore);
 
 // Create a store
 const store = createStoreWithMiddleware(rootReducer, state);

@@ -1,0 +1,19 @@
+a {
+  cursor: pointer;
+  text-decoration: no-underline;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none!important;
+  cursor: pointer;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+a:hover {
+  color: #DC143C!important;
+}
+
+body {
+  background-color: #D0D0D0;
+}

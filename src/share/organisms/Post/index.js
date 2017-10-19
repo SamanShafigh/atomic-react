@@ -9,7 +9,7 @@ import Icon from '../../atoms/Icon';
 import Divider from '../../atoms/Divider';
 import Loading from '../../atoms/Loading';
 
-const Post = ({post}) => (
+const Post = ({ post, likePost }) => (
   <div>
     <Grid>
       <Cell>
@@ -31,11 +31,17 @@ const Post = ({post}) => (
     <Grid>
       <Cell>
         <span className={getPostFooterStyle()}>{post.likes} Likes</span>
+        <span className={getPostFooterStyle()}>{post.dislike} Dislike</span>
       </Cell>
     </Grid>
     <Grid>
       <Cell size="1">
-        <Icon name="ic_thumb_up">Like</Icon>
+        <a onClick={() => likePost(post.id)}>
+          <Icon name="ic_thumb_up">Like</Icon>
+        </a>
+        <a>
+          <Icon name="ic_thumb_down">Dislike</Icon>
+        </a>
         <Icon name="ic_comment">Comment</Icon>
       </Cell>
     </Grid>
@@ -48,16 +54,20 @@ const Post = ({post}) => (
 );
 
 Post.propTypes = {
-  id: PropTypes.number,
-  summary: PropTypes.string,
-  img: PropTypes.string,
-  likes: PropTypes.number,
-  isPosting: PropTypes.bool,
-  user: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    email: PropTypes.string,
+  likePost: PropTypes.func,
+  post: PropTypes.shape({
+    id: PropTypes.number,
+    summary: PropTypes.string,
     img: PropTypes.string,
+    likes: PropTypes.number,
+    dislike: PropTypes.number,
+    isPosting: PropTypes.bool,
+    user: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      email: PropTypes.string,
+      img: PropTypes.string,
+    }),
   }),
 }
 

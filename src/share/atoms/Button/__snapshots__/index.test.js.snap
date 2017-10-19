@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders children`] = `
+.css-1hmd4d5,
+[data-css-1hmd4d5] {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.33rem 1rem;
+  border-radius: 0px;
+  border: 1px solid rgb(255, 85, 0);
+  background: #ffffff;
+  color: rgb(255, 85, 0);
+  cursor: pointer;
+  font-weight: 400;
+  width: 12.5rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-1hmd4d5:hover,
+[data-css-1hmd4d5]:hover,
+.css-1hmd4d5[data-simulate-hover],
+[data-css-1hmd4d5][data-simulate-hover] {
+  box-shadow: 0 0 0 1px rgb(255, 85, 0);
+}
+
+<button
+  data-css-1hmd4d5=""
+  onClick={[Function]}
+>
+  Hello Button
+</button>
+`;

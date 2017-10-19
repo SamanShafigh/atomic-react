@@ -42,7 +42,7 @@ const Icon = ({
   title,
   color
 }) => (
-  <span className={getWrapperStyle(color)} title={title} >
+  <span className={getWrapperStyle(color)} title={title}>
     {getIcon(name, size)} {getIconText(children)}
   </span>
 );

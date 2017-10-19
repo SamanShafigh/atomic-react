@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-import Input from '../../share/atoms/Input';
+import Textarea from '../../share/atoms/Input';
 import Button from '../../share/atoms/Button';
 import Panel from '../../share/molecules/Panel';
 
@@ -30,14 +30,14 @@ class WritePost extends React.Component {
 
   render() {
     return (
-      <Panel title="Share an article, photo, video or idea">
+      <Panel title="Share an article, photo, video or idea" icon="ic_subject">
         <form onSubmit={this.onSubmit}>
-          <span className="write-post-input">
-            <Input onChange={this.onChange} size="large" value={this.state.summary} />
-          </span>
-            <span className="write-post-button">
+          <div className="write-post-input">
+            <Textarea onChange={this.onChange} size="large" value={this.state.summary} />
+          </div>
+          <div className="write-post-button">
             <Button size="large">Post</Button>
-          </span>
+          </div>
         </form>
       </Panel>
     )

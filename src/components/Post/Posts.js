@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import Post from '../../share/organisms/Post';
 import Panel from '../../share/molecules/Panel';
 
-const Posts = ({ posts }) => (
-  <Panel title="Experience">
+const Posts = ({ posts, likePost }) => (
+  <Panel title="Today feeds" icon="ic_question_answer">
     {posts.map((post) => (
-      <Post post={post} key={post.id} />
+      <Post post={post} key={post.id} likePost={likePost} />
     ))}
   </Panel>
 );
 
 Posts.propTypes = {
+  likePost: PropTypes.func,
   posts: PropTypes.arrayOf(
       PropTypes.shape({
       id: PropTypes.number,

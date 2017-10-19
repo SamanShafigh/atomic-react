@@ -11,5 +11,6 @@ export const getWrapperStyle = (color) => {
     color: color,
     paddingLeft: '5px',
     paddingRight: '10px',
+    textDecoration: 'none',
   });
 }
