@@ -1,3 +1,11 @@
+import axios from 'axios';
+import { data } from '../fixtures/news';
+
 /**
- * Created by saman on 20/10/2017.
+ * Mock api
  */
+export const asyncFetchNews = (callBack) => {
+  setTimeout(() => {
+    callBack(data);
+  }, 1000);
+}

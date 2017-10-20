@@ -15,7 +15,7 @@ class Feeds extends React.Component {
     return (
       <div>
         <WritePost user={this.props.profile} addPost={this.props.addPost} />
-        <Posts posts={this.props.posts} likePost={this.props.likePost} />
+        <Posts isLoading={this.props.status.loading} posts={this.props.posts} likePost={this.props.likePost} />
       </div>
     );
   }
@@ -23,6 +23,7 @@ class Feeds extends React.Component {
 
 const mapStateToProps = state => ({
   posts: state.posts,
+  status: state.status.posts,
   profile: state.profile,
 });
 

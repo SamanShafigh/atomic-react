@@ -1,9 +1,11 @@
 import Actions from '../../lib/constants/Actions';
 
 function posts(state = [], action) {
-  console.log(action.type);
 
   switch(action.type) {
+    case Actions.POST_POSTS_FETCHED:
+      return action.data;
+
     /**
      * Add a post that user want to post it
      */
@@ -40,7 +42,6 @@ function posts(state = [], action) {
      * Liking a post
      */
     case Actions.POST_LIKE_POST:
-
       return state.reduce((posts, post) => {
         if (post.id === action.postId) {
           post.likes = post.likes + 1;

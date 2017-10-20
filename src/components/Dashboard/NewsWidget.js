@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 import Panel from '../../share/molecules/Panel';
+import News from '../../share/organisms/News';
 
-const News = ({ news }) => (
+const NewsWidget = ({ news }) => (
   <div className="news-items">
     <Panel title="News" icon="ic_question_answer">
-      {news? news.map((story, index) => <div key={index}>{story}</div>) : null}
+      {news.loaded?
+        news.data.map((story, index) => <News key={index} news={story} />)
+        :
+        null
+      }
     </Panel>
   </div>
 );
 
-News.propTypes = {
+NewsWidget.propTypes = {
   news: PropTypes.any,
 }
 
-export default News;
+export default NewsWidget;

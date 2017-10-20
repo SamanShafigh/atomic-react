@@ -1,5 +1,5 @@
 import Actions from '../../lib/constants/Actions';
-import { asyncAddPost } from '../../apis/PostApi';
+import { asyncAddPost, asyncFetchPost } from '../../apis/PostApi';
 
 // async action to fetch user
 export function addPost(user, summary) {
@@ -41,9 +41,22 @@ export function likePost(postId) {
   }
 }
 
+// Like a post
+export function postFetched(data) {
+  return {
+    type: Actions.POST_POSTS_FETCHED,
+    data,
+  }
+}
+
 // fetch posts
 export function fetchPosts() {
-  return {
-    type: Actions.POST_FETCH_POSTS,
-  }
+  return (dispatch) => {
+
+    // Then we post it and if things goes well then we need
+    // to fix the temporary id of post
+    asyncFetchPost(
+      (data) => dispatch(postFetched(data))
+    );
+  };
 }

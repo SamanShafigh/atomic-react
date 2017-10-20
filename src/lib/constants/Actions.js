@@ -6,10 +6,18 @@ export default Object.freeze({
    * Post related actions
    */
   POST_FETCH_POSTS: 'POST_ADD_POSTS',
+  POST_POSTS_FETCHED: 'POST_POSTS_FETCHED',
   POST_FETCH_POST: 'POST_ADD_POST',
+  POST_POST_FETCHED: 'POST_POST_FETCHED',
   POST_ADD_POST: 'POST_ADD_POST',
   POST_POST_ADDED: 'POST_POST_ADDED',
   POST_LIKE_POST: 'POST_LIKE_POST',
+
+  /**
+   * Profile related actions
+   */
+  NEWS_FETCH_DATA: 'NEWS_FETCH_DATA',
+  NEWS_DATA_FETCHED: 'NEWS_DATA_FETCHED',
 
   /**
    * Profile related actions
