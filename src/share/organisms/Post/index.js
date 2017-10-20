@@ -22,9 +22,9 @@ const Post = ({ post, likePost }) => (
     </Grid>
     <Grid>
       <Cell>
+        <Loading isLoading={post.isPosting} />
         <span className={getPostStyle()}>
           {post.summary}
-          <Loading isLoading={post.isPosting} />
         </span>
       </Cell>
     </Grid>

@@ -6,7 +6,13 @@ import User from '../../share/molecules/User';
 const Users = ({ users, fetchUser }) => (
   <Grid wrap="wrap-reverse">
     {users.map((user) => (
-      <User name={user.name} fetchUser={fetchUser} id={user.id} img={user.img} key={user.id} />
+      <User
+        name={user.name}
+        occupation={user.occupation}
+        fetchUser={fetchUser}
+        id={user.id}
+        img={user.img}
+        key={user.id} />
     ))}
   </Grid>
 );
@@ -17,6 +23,7 @@ Users.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     email: PropTypes.string,
+    occupation: PropTypes.string,
     img: PropTypes.string,
   }),
 }

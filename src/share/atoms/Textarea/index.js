@@ -8,9 +8,7 @@ const Textarea = ({
   size,
   disabled = false,
 }) => (
-  <textarea onChange={(e) => onChange(e)} className={getStyle(size, disabled)}>
-    {value}
-  </textarea>
+  <textarea value={value} onChange={(e) => onChange(e)} className={getStyle(size, disabled)} />
 );
 
 Textarea.propTypes = {

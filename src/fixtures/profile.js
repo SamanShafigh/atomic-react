@@ -1,7 +1,7 @@
 const profile = {
   id: 'saman',
   name: 'Saman',
-  img: 'static/profile/g.jpg',
+  img: 'static/profile/gg.jpg',
   location: "Sydney, Australia",
   occupation: "Software Development",
   connection: 500,

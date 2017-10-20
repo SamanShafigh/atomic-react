@@ -7,6 +7,6 @@ const story = storiesOf('User', module);
 
 story.add('default', () => (
   <div>
-    <User name={user.name} img={user.img} />
+    <User name={user.name} img={user.img} occupation={user.occupation} />
   </div>
 ));

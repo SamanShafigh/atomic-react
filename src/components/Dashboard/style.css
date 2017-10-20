@@ -4,5 +4,11 @@
 
 .navigation-header {
   padding-top: 10px;
-  margin: auto;
+
+}
+
+.news-items {
+  position: fixed;
+  top: 0px;
+  width: 230px;
 }

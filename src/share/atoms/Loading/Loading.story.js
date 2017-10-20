@@ -5,5 +5,7 @@ import Loading from './';
 const story = storiesOf('Loading', module);
 
 story.add('default loading', () => (
-    <Loading isLoading={true} />
+  <div>
+    Sample text <Loading isLoading={true} /> with loading
+  </div>
 ));

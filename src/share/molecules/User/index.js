@@ -4,7 +4,8 @@ import {
   getUserContainerStyle,
   getUserNameStyle,
   getUserImageStyle,
-  getUserNameLinkStyle
+  getUserNameLinkStyle,
+  getUserOccupationStyle
 } from './style.js';
 
 import ProfileImage from '../ProfileImage';
@@ -13,7 +14,8 @@ const User = ({
   fetchUser,
   id,
   name,
-  img
+  img,
+  occupation
 }) => (
   <div className={getUserContainerStyle()}>
     <div className={getUserImageStyle()}>
@@ -23,6 +25,7 @@ const User = ({
       <a className={getUserNameLinkStyle()} onClick={() => fetchUser(id)}>
         {name}
       </a>
+      <div className={getUserOccupationStyle()}>{occupation}</div>
     </div>
   </div>
 );
@@ -32,6 +35,7 @@ User.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  occupation: PropTypes.string,
 }
 
 export default User;

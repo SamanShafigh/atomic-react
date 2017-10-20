@@ -5,7 +5,8 @@ import ProfileImage from '../ProfileImage';
 
 const Connection = ({
   name,
-  img
+  img,
+  occupation
 }) => (
   <span className={getConnectionStyle()}>
     <ProfileImage url={img} size="small" title={name} />
@@ -15,6 +16,7 @@ const Connection = ({
 Connection.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  occupation: PropTypes.string,
 }
 
 export default Connection;
