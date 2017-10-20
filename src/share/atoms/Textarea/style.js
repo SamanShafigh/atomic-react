@@ -19,7 +19,7 @@ const baseStyle = (size) => {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '140px',
+    height: '60px',
     width: widthSize[size],
     background: INPUT.BG_COLOR,
     padding: '0.33rem 1rem',

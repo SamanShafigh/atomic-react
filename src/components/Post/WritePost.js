@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-import Textarea from '../../share/atoms/Input';
+import Textarea from '../../share/atoms/Textarea';
 import Button from '../../share/atoms/Button';
 import Panel from '../../share/molecules/Panel';
 
