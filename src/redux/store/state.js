@@ -6,8 +6,10 @@ const state = {
   // This object keeps the status of app related to each state segment
   status: {
     posts: {
+			postId: null,
       loading: true,
       loaded: false,
+      commenting: false,
     },
     post: {},
     network: {},
@@ -19,11 +21,12 @@ const state = {
     data: [],
     loaded: false
   },
-  user: {
-    loading: false,
-    loaded: false,
-    data: {}
-  },
+	user: {
+		loading: false,
+		loaded: false,
+		data: {}
+	},
+	comments: [],
   profile,
   network,
   posts: []

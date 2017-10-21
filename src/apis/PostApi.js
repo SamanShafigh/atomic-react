@@ -1,5 +1,6 @@
 import axios from 'axios';
-import data from '../fixtures/posts';
+import posts from '../fixtures/posts';
+import comments from '../fixtures/comments';
 
 /**
  * Mock api
@@ -13,8 +14,26 @@ export const asyncAddPost = (tempId, user, summary, callBack) => {
 /**
  * Mock api
  */
+export const asyncFetchPostComments = (postId, callBack) => {
+	setTimeout(() => {
+		callBack(null, comments);
+	}, 100);
+}
+
+/**
+ * Mock api
+ */
 export const asyncFetchPost = (callBack) => {
-  setTimeout(() => {
-    callBack(data);
-  }, 1000);
+	setTimeout(() => {
+		callBack(posts);
+	}, 200);
+}
+
+/**
+ * Mock api
+ */
+export const asyncDislikePost = (postId, callBack) => {
+	setTimeout(() => {
+		callBack(null, postId);
+	}, 100);
 }

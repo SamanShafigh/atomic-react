@@ -9,8 +9,10 @@ import Icon from '../../atoms/Icon';
 import Divider from '../../atoms/Divider';
 import Loading from '../../atoms/Loading';
 
-const Post = ({ post, likePost }) => (
+const Post = ({ post, likePost, dislikePost, openPostComments }) => (
   <div>
+    {/* I think this is not good, we are rendering PostComments part for each post */}
+    {/*<PostComments comments={post.comments} isVisible={post.isCommenting} />*/}
     <Grid>
       <Cell>
         <ProfileInfo
@@ -39,10 +41,12 @@ const Post = ({ post, likePost }) => (
         <a onClick={() => likePost(post.id)}>
           <Icon name="ic_thumb_up">Like</Icon>
         </a>
-        <a>
+        <a onClick={() => dislikePost(post.id)}>
           <Icon name="ic_thumb_down">Dislike</Icon>
         </a>
-        <Icon name="ic_comment">Comment</Icon>
+        <a onClick={() => openPostComments(post.id)}>
+          <Icon name="ic_comment">Comment</Icon>
+        </a>
       </Cell>
     </Grid>
     <Grid>
@@ -55,24 +59,26 @@ const Post = ({ post, likePost }) => (
 
 Post.propTypes = {
   likePost: PropTypes.func,
+	dislikePost: PropTypes.func,
+	openPostComments: PropTypes.func,
   post: PropTypes.shape({
     id: PropTypes.number,
     summary: PropTypes.string,
     img: PropTypes.string,
     likes: PropTypes.number,
     dislike: PropTypes.number,
-    isPosting: PropTypes.bool,
     user: PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
       email: PropTypes.string,
       img: PropTypes.string,
     }),
+		isPosting: PropTypes.bool,
   }),
 }
 
 Post.defaultProps = {
-  isPosting: false
+  isPosting: false,
 }
 
 export default Post;

@@ -7,6 +7,7 @@ import status from './status';
 import posts from './posts';
 import profile from './profile';
 import network from './network';
+import comments from './comments';
 
 const rootReducer = combineReducers({
   user,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   posts,
   profile,
   network,
+	comments,
   routing: routerReducer
 });
 

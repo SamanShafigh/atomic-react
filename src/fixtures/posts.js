@@ -5,6 +5,7 @@ const posts = [
     img: "",
     likes: 12,
     dislike: 1,
+		comments: [],
     user: {
       id: 'sina',
       name: 'Sina',
@@ -18,6 +19,7 @@ const posts = [
     img: "",
     likes: 52,
     dislike: 10,
+		comments: [],
     user: {
       id: 'verica',
       name: 'Verica',
@@ -31,6 +33,7 @@ const posts = [
     img: "",
     likes: 92,
     dislike: 1,
+		comments: [],
     user: {
       id: 'shayan',
       name: 'Shayan',
@@ -44,6 +47,7 @@ const posts = [
     img: "",
     likes: 22,
     dislike: 1,
+		comments: [],
     user: {
       id: 'dave',
       name: 'Dave',
@@ -57,6 +61,7 @@ const posts = [
     img: "",
     likes: 192,
     dislike: 1,
+		comments: [],
     user: {
       id: 'faraz',
       name: 'Faraz',
@@ -70,6 +75,7 @@ const posts = [
     img: "",
     likes: 52,
     dislike: 1,
+		comments: [],
     user: {
       id: 'chao',
       name: 'Chao',
@@ -83,6 +89,7 @@ const posts = [
     img: "",
     likes: 82,
     dislike: 1,
+		comments: [],
     user: {
       id: 'chao',
       name: 'Chao',

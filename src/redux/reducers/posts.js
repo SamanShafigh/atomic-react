@@ -38,17 +38,47 @@ function posts(state = [], action) {
         return post;
       });
 
-    /**
-     * Liking a post
-     */
-    case Actions.POST_LIKE_POST:
-      return state.reduce((posts, post) => {
-        if (post.id === action.postId) {
-          post.likes = post.likes + 1;
-        }
-        posts.push(post);
-        return posts;
-      }, []);
+		/**
+		 * Liking a post
+		 */
+		case Actions.POST_LIKE_POST:
+			return state.reduce((posts, post) => {
+				if (post.id === action.postId) {
+					post.likes++;
+				}
+				posts.push(post);
+				return posts;
+			}, []);
+
+		/**
+		 * Try to disLiking a post
+		 */
+		case Actions.POST_DISLIKE_POST:
+			return state.reduce((posts, post) => {
+				if (post.id === action.postId) {
+					post.dislike++;
+				}
+				posts.push(post);
+				return posts;
+			}, []);
+
+		/**
+		 * Post get disliked successfully
+		 */
+		case Actions.POST_POST_DISLIKED:
+			return state;
+
+		/**
+		 * DisLiking a post was failed
+		 */
+		case Actions.POST_POST_DISLIKED_FAILED:
+			return state.reduce((posts, post) => {
+				if (post.id === action.postId) {
+					post.dislike--;
+				}
+				posts.push(post);
+				return posts;
+			}, []);
 
     default:
       return state;

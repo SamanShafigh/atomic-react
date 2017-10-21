@@ -4,17 +4,25 @@ import Post from '../../share/organisms/Post';
 import Panel from '../../share/molecules/Panel';
 import Loading from '../../share/atoms/Loading';
 
-const Posts = ({ posts, isLoading, likePost }) => (
+const Posts = ({ posts, isLoading, likePost, dislikePost, openPostComments }) => (
   <Panel title="Today feeds" icon="ic_question_answer">
     <Loading isLoading={isLoading} />
     {posts.map((post) => (
-        <Post post={post} key={post.id} likePost={likePost} />
+        <Post
+          post={post}
+          key={post.id}
+          likePost={likePost}
+          dislikePost={dislikePost}
+          openPostComments={openPostComments}
+        />
       ))}
   </Panel>
 );
 
 Posts.propTypes = {
   likePost: PropTypes.func,
+	dislikePost: PropTypes.func,
+	openPostComments: PropTypes.func,
   isLoading: PropTypes.bool,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
