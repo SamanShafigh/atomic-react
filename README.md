@@ -1,134 +1,16 @@
-4.1 React
-User icon
-Saman Shafigh
-Last modified 16 minutes ago
+# atomic-react
 
-The aim of this document is to cover some best practices and design patterns of implementing a large application using React/Redux libraries.
+The aim of this document is to cover some best practices and design patterns of implementing a large application using atomic component design principles in React/Redux libraries.
 
-    4.1.1 What is React
-    4.1.2 Prerequisites
-    4.1.3 Main building blocks
-    4.1.4 ToDo app:
-    4.1.5 How to implement the view part
-        4.1.5.1 First group (containers)
-        4.1.5.2 Second group (components)
-    4.1.6 Atomic Design
-    4.1.7 Story Book
-    4.1.8 How to implement the sate part
-    4.1.9 How to connect the 2 parts
-
-
-I have implemented the following project which you can clone and run it using this repository
-
-https://bitbucket.org/elmolearning/react-example-saman/src
+## How to run
 
 Just clone it and then run
-
 yarn install
-
 yarn start
 
+## How to implement the view part
 
-4.1.1 What is React
-
-React is a flexible and efficient JavaScript library for building user interfaces. It has a fairly minimal API surface.
-
-
-Desing Goal
-
-do one thing and do it well
-4.1.2 Prerequisites
-
-JavaScript (In a good way),  ES6, React, Redux and a bit of Webpack, Bable, Eslint
-
-* ES6: ES6 (ECMAScript 6 or ES2015) is a significant update to the language since ES5 was standardized in 2009. It is the latest version of the ECMAScript standard
-
-* Webpack: Webpack is a module bundler for modern JavaScript applications.
-
-* Bable: The syntax of JSX, ES6 is not supported by most browsers therefore, we have to pipe our codes through the babel loaders
-
-More:
-
-
-[the world's most misunderstood programming language](http://crockford.com/javascript/)
-
-[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-
-[es6features](https://github.com/lukehoban/es6features)
-
-[ES6](http://www.ecma-international.org/ecma-262/6.0/)
-
-[Webpac](https://webpack.github.io/docs/)
-
-[babel](https://babeljs.io/)
-
-
-4.1.3 Main building blocks
-
-In a very top level overview a React/Redux application is consist of 2 main parts:
-
-1) View or user interface of app which is managed by React.
-
-2) State or data that app represent right now at this moment which is manage by Redux.
-
-
-First part (View)
-
-This part defines how your app looks like and how it can interact with users. This part is handled by React (containers and components). When we implement this part our goal is:
-
-Desing Goal
-
-Make this part as logic less as possible and just focused on how to display the data
-
-The only thing could happen here is to call an action which will dispatch an event and who will handle this action is not our business in this part
-
-
-Second part (State)
-
-In our application this part is handled by Redux (actions and reducers). When we implement this part our goal is:
-
-Desing Goal
-
-Make this part only concerns about the date of the application
-
-How to transfer one state to another state when an action happen
-
-
-4.1.4 ToDo app:
-
-In a todo app the first part (view) could be something like this. This is a component in React. This component is logic-less and all the necessarily data or functionality is injected into it as props { todos, removeTodo }.
-const Todos = ({ todos, removeTodo }) => (
-  <Panel>
-    {todos.map((post) => (
-        <Todo
-          title={todo.title}
-          key={todo.id}
-          removeTodo={removeTodo}
-        />
-      ))}
-  </Panel>
-);
-
-The concerns of this part is just about how to display and how to connect user interactions (by simply dispatching an action) with the second part.
-
-
-The second part (state) could be something like this. This object is called state and represented the entire state of application. Redux manage this state object by means of dispatching actions and reducers.
-
-For more information about Redux (https://egghead.io/lessons/react-redux-implementing-store-from-scratch)
-state = {
-    todos: [
-      {id:1, title: 'A'},
-      {id:1, title: 'B'},
-      {id:1, title: 'C'},
-    ]
-}
-
-In nut-shell we can say the concern of this part is only how to manage this state object.
-
-
-4.1.5 How to implement the view part
-
-Even Implementing a logic less app that only displays some could be challenging for big application. One of the best practices that is used for implanting a complex react application is to divide components into 2 groups that we call them containers and components
+Even Implementing a logic less app that only displays some data could be challenging for big application. One of the practices that is used for implanting a complex react application is to divide components into 2 groups that we call them containers and components
 
 https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 
@@ -137,14 +19,15 @@ https://jaketrent.com/post/smart-dumb-components-react/
 https://preact.gitbooks.io/react-book/content/jsx/dumb.html
 
 
-4.1.5.1 First group (containers)
+## First group (containers)
 
 The first group is called containers (it is also called State-full, smart or class based component). If we are not using Redux This containers are the places that we define the state of application and all the functionality that modifies this state. That is why we call them state-full or smart. However if we use Redux this components provide the connection to Redux action dispatchers and states by simply mapping actions and sates to props. Note that when we use Redux even the containers are relatively logicless.
 
 
 For example in our sample app we have one container component called Dashboard and it is located inside src/containers folder
-
 This is the implementation of this container. You can see we use ES6 class to define it and that is why we call them class-based components.
+
+```
 class Dashboard extends React.Component {
   render() {
     return (
@@ -152,9 +35,11 @@ class Dashboard extends React.Component {
     );
   }
 }
+```
 
 A container can also be consist of some other containers for example in our case we have another container called Feeds inside Dashboard container
 
+```
 class Dashboard extends React.Component {
   render() {
     return (
@@ -164,13 +49,15 @@ class Dashboard extends React.Component {
     );
   }
 }
-4.1.5.2 Second group (components)
+```
+
+## Second group (components)
 
 The second group is called components (it is also called State-less, dumb or function based component). The only one concern of these components is to how represent the UI and call an action when user interact with them. They don't know anything about the logic of application. They don't implement any API call or any logic. All the functionality that needed for user interactions (for example liking a post) and all data that need to be display (for example post data) are pass to these components as props.
 
-
 For example in our app the Dashboard container is also consist of 2 dumb components. One is Header and one is NewsWidget
 
+```
 class Dashboard extends React.Component {
   render() {
     return (
@@ -182,10 +69,12 @@ class Dashboard extends React.Component {
     );
   }
 }
+```
 
 The Feeds container is also consist of 2 dumb components. One is Posts and one is WritePost
-
 This is the implementation of our Feeds container (Note: the connection to Redux is removed for simplicity)
+
+```
 class Feeds extends React.Component {
   render() {
     return (
@@ -202,8 +91,11 @@ class Feeds extends React.Component {
     );
   }
 }
+```
 
 And this is the implementation of our dumb or function based component. You can see we are not using ES6 class to define the component. The necessarily data (posts) and the functionality (likePost) is pass to this component as a prop.
+
+```
 const Posts = ({ posts, likePost }) => (
   <Panel title="Today feeds" icon="ic_question_answer">
     {posts.map((post) => (
@@ -215,8 +107,9 @@ const Posts = ({ posts, likePost }) => (
       ))}
   </Panel>
 );
+```
 
-4.1.6 Atomic Design
+## Atomic Design
 
 We can continue and break our app to smaller dumb, logic less, and state less components. For example each Post can be implemented as a component. Even you can break a Post component to smaller reusable components like Icon, Button and ...
 
