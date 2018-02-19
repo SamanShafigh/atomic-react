@@ -3,7 +3,7 @@
 The aim of this document is to cover some best practices and design patterns of implementing a large application using atomic component design principles in React/Redux libraries.
 I am developing an app like this
 
-(https://github.com/SamanShafigh/atomic-react/blob/master/doc/app-component.jpg)
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/app-component.jpg)
 
 ## How to run
 
