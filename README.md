@@ -31,6 +31,9 @@ The first group is called containers (it is also called State-full, smart or cla
 
 
 For example in our sample app we have one container component called Dashboard and it is located inside src/containers folder
+
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s1.jpg)
+
 This is the implementation of this container. You can see we use ES6 class to define it and that is why we call them class-based components.
 
 ```
@@ -44,6 +47,8 @@ class Dashboard extends React.Component {
 ```
 
 A container can also be consist of some other containers for example in our case we have another container called Feeds inside Dashboard container
+
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s2.jpg)
 
 ```
 class Dashboard extends React.Component {
@@ -63,6 +68,8 @@ The second group is called components (it is also called State-less, dumb or fun
 
 For example in our app the Dashboard container is also consist of 2 dumb components. One is Header and one is NewsWidget
 
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s3.jpg)
+
 ```
 class Dashboard extends React.Component {
   render() {
@@ -78,6 +85,10 @@ class Dashboard extends React.Component {
 ```
 
 The Feeds container is also consist of 2 dumb components. One is Posts and one is WritePost
+
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s4.jpg)
+
+
 This is the implementation of our Feeds container (Note: the connection to Redux is removed for simplicity)
 
 ```
@@ -115,13 +126,17 @@ const Posts = ({ posts, likePost }) => (
 );
 ```
 
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s5.jpg)
+
+
 ## Atomic Design
 
 We can continue and break our app to smaller dumb, logic less, and state less components. For example each Post can be implemented as a component. Even you can break a Post component to smaller reusable components like Icon, Button and ...
 
 However we can see some of these components are much more smaller and reusable than others. For example a Button or Icon component can be implemented as a share library component and can be used by many single page application project across our company.
-
 We use a concept called Atomic Design to break the components to more reusable smaller components.
+
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/atomic.png)
 
 http://bradfrost.com/blog/post/atomic-web-design/
 
@@ -130,6 +145,8 @@ https://medium.com/@yejodido/atomic-components-managing-dynamic-react-components
 https://arc.js.org/
 
 "We’re not designing pages, we’re designing systems of components.—Stephen Hay"
+
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s6.jpg)
 
 For example you can see for this application we implemented the building blocks of our components as atoms, molecules and organisms. An atom component is the final small and reusable pieces of UI element that can not be divided into smaller part. For example a Button or Icon.
 
