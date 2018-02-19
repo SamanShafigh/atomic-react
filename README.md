@@ -36,7 +36,7 @@ For example in our sample app we have one container component called Dashboard a
 
 This is the implementation of this container. You can see we use ES6 class to define it and that is why we call them class-based components.
 
-```
+```javascript
 class Dashboard extends React.Component {
   render() {
     return (
@@ -50,7 +50,7 @@ A container can also be consist of some other containers for example in our case
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s2.jpg)
 
-```
+```javascript
 class Dashboard extends React.Component {
   render() {
     return (
@@ -70,7 +70,7 @@ For example in our app the Dashboard container is also consist of 2 dumb compone
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s3.jpg)
 
-```
+```javascript
 class Dashboard extends React.Component {
   render() {
     return (
@@ -91,7 +91,7 @@ The Feeds container is also consist of 2 dumb components. One is Posts and one i
 
 This is the implementation of our Feeds container (Note: the connection to Redux is removed for simplicity)
 
-```
+```javascript
 class Feeds extends React.Component {
   render() {
     return (
@@ -112,7 +112,7 @@ class Feeds extends React.Component {
 
 And this is the implementation of our dumb or function based component. You can see we are not using ES6 class to define the component. The necessarily data (posts) and the functionality (likePost) is pass to this component as a prop.
 
-```
+```javascript
 const Posts = ({ posts, likePost }) => (
   <Panel title="Today feeds" icon="ic_question_answer">
     {posts.map((post) => (
@@ -206,7 +206,7 @@ Icon atom
 
 This is how the implementation of button atom component looks like. Note that in this project I have not used any CSS library. Each component implements its style with java script. We used a library called Glamor https://github.com/threepointone/glamor which allow us to define css in javascript. You can read more about it on the web
 
-```
+```javascript
 const Button = ({
   onClick,
   children,
@@ -222,7 +222,7 @@ const Button = ({
 
 A more complex UI element for example in our project is single Post and this is how we implemented it. You can see the function for liking is pass to this component as props and the only thing this component will do is to handle the user click interaction on the Like icon "onClick={() => likePost(post.id)}". You can see this component does not know anything about how the likePost function is implemented or even what exactly it will do.
 
-```
+```javascript
 import Grid from '../../atoms/Grid';
 import Cell from '../../atoms/Cell';
 import ProfileInfo from '../../molecules/ProfileInfo';
@@ -272,7 +272,7 @@ https://github.com/storybooks/storybook
 In our example app I have created a story for each atomic component. For example the story of a Button element could be like this
 const story = storiesOf('Button', module);
 
-```
+```javascript
 story.add('sizes', () => (
   <div>
       <Button onClick={() => {}}>
@@ -304,3 +304,49 @@ story.add('active/disable', () => (
 
 The story book can be run by `start-storybook -p 9009 -s public` and it looks like this.
 
+## Styling
+
+No open-source CSS library is used and I used a library called glamor to do the styling of my UI components in javascript.
+
+https://github.com/threepointone/glamor
+
+```javascript
+import { css } from 'glamor'
+
+// make css rules
+let rule = css({
+  color: 'red',
+  ':hover': {
+    color: 'pink'
+  },
+  '@media(min-width: 300px)': {
+    color: 'green',
+    ':hover': {
+      color: 'yellow'
+    }
+  }
+})
+
+// add as data attributes
+<div {...rule} {...another}>
+  zomg
+</div>
+
+// or as classes
+<div className={`${rule} ${another}`}>
+  zomg
+</div>
+
+// merge rules for great justice
+let mono = css({
+  fontFamily: 'monospace'
+})
+
+let bolder = css({
+  fontWeight: 'bolder'
+})
+
+<div {...css(mono, bolder)}>
+  bold code!
+</div>
+```
