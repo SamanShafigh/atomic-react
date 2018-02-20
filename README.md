@@ -269,7 +269,15 @@ Storybook is a development environment for UI components. It allows you to brows
 
 https://github.com/storybooks/storybook
 
-In our example app I have created a story for each atomic component. For example the story of a Button element could be like this
+In our example app I have created a story for each atomic component. For example the story of a Icon atom or Post organisms is like this
+
+### Icon atom
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/st1.png)
+
+### Post organisms
+![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/st2.png)
+
+
 const story = storiesOf('Button', module);
 
 ```javascript

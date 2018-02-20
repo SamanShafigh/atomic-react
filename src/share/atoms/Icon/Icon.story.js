@@ -23,6 +23,15 @@ story.add('color', () => (
     <Icon size="55" color="#9B59B6" />
     <Icon size="55" color="#1ABC9C" />
     <Icon size="55" color="#F4D03F" />
+
+    <pre>{`
+      <Icon size="55" />
+      <Icon size="55" color="#2874A6" />
+      <Icon size="55" color="#C0392B" />
+      <Icon size="55" color="#9B59B6" />
+      <Icon size="55" color="#1ABC9C" />
+      <Icon size="55" color="#F4D03F" />
+    `}</pre>
   </div>
 ));
 

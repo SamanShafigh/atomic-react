@@ -25,6 +25,26 @@ story.add('sizes', () => (
         Large
       </Button><br /><br />
     </div>
+
+    <pre>{`
+      <div>
+        <Button onClick={() => {}}>
+          Default
+        </Button>
+      </div>
+  
+      <div>
+        <Button type="primary" size="small" onClick={() => {}}>
+          Small
+        </Button>
+      </div>
+  
+      <div>
+        <Button type="primary" size="large" onClick={() => {}}>
+          Large
+        </Button>
+      </div>
+    `}</pre>
   </div>
 ));
 
