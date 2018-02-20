@@ -32,7 +32,11 @@ story.add('posting post', () => (
           },
         };
         
-        return <Post post={post}  />
+        return (<Post post={post} 
+          likePost={() => {}} 
+          dislikePost={() => {}} 
+          openPostComments={() => {}} 
+        />);
     `}</pre>
   </div>
 ));
