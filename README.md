@@ -1,3 +1,12 @@
+Review Note: After using this pattern for few months I think the separation of components into atoms/molecules/organisms is not a good idea since you and other developers always facing these question:
+
+### Is this componnet an atom or a molecule?  
+
+Instead I think it is better to define and abstract your UI componnets in a more meanningfull way. In a way that you dont need to ask question or feel guilty about whether you defined your commponent in the right place.
+
+For example in this https://github.com/SamanShafigh/react-fondations project I've grouped my UI elements in a folder called `elements` (which you can organize it using lernajs) in a same way as ant-design did 
+
+
 # atomic-react
 
 The aim of this document is to cover some best practices and design patterns of implementing a large application using atomic component design principles in React/Redux libraries.
@@ -277,10 +286,15 @@ In our example app I have created a story for each atomic component. For example
 ### Post organisms
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/st2.png)
 
+### Sample of Button story
+
+```javascript
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import Button from './';
 
 const story = storiesOf('Button', module);
 
-```javascript
 story.add('sizes', () => (
   <div>
       <Button onClick={() => {}}>
@@ -311,6 +325,7 @@ story.add('active/disable', () => (
 ```
 
 The story book can be run by `start-storybook -p 9009 -s public` and it looks like this.
+or just `yarn storybook`
 
 ## Styling
 
