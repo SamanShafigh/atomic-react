@@ -1,4 +1,3 @@
-import axios from 'axios';
 import users from '../fixtures/network';
 
 /**

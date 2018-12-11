@@ -24,7 +24,6 @@ class Feeds extends React.Component {
           addPost={this.props.addPost}
         />
         <Posts
-          isLoading={this.props.status.loading}
           posts={this.props.posts}
           likePost={this.props.likePost}
           dislikePost={this.props.dislikePost}

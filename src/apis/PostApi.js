@@ -1,4 +1,3 @@
-import axios from 'axios';
 import posts from '../fixtures/posts';
 import comments from '../fixtures/comments';
 
