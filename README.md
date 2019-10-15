@@ -1,18 +1,10 @@
-Review Note: After using this pattern for few months I think the separation of components into atoms/molecules/organisms is not a good idea since you and other developers always facing these question:
+# Sample React App
 
-### Is this componnet an atom or a molecule?  
-
-Instead I think it is better to define and abstract your UI componnets in a more meanningfull way. In a way that you dont need to ask question or feel guilty about whether you defined your commponent in the right place.
-
-For example in this https://github.com/SamanShafigh/react-fondations project I've grouped my UI elements in a folder called `elements` (which you can organize it using lernajs) in a same way as ant-design did 
-
-
-# atomic-react
-
-The aim of this document is to cover some best practices and design patterns of implementing a large application using atomic component design principles in React/Redux libraries.
-I am developing an app like this
+The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. If you looking for a proper pattern to use for implementing your front end app in ELMO we recommend looking at https://bitbucket.org/elmodevelopment/elmo-react-app/src/master/ 
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/app-component.jpg)
+
+Review Note: In this repository we use a pattern called atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957) however using this pattern is not very incoreged. The concept of atomic design is about separation of components into atoms/molecules/organisms. However this kind of separation leaves your team always facing these questions: "Is this component an atom or a molecule?" Instead we think it is better to define and abstract your UI components in a more meaningful way. For example in ELMO UI components we group them based on their use cases (https://bitbucket.org/elmodevelopment/elmo-elements/src/master/).
 
 ## How to run
 
@@ -25,7 +17,7 @@ yarn start
 
 ## How to implement the view part
 
-Even Implementing a logic less app that only displays some data could be challenging for big application. One of the practices that is used for implanting a complex react application is to divide components into 2 groups that we call them containers and components
+Even implementing a logic-less app that only displays some data could be challenging when it becomes big. One of the practices that is used for implanting a complex react application is to divide components into 2 groups that we call them containers and components
 
 https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 
@@ -64,7 +56,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-          <Feeds />
+        <Feeds />
       </div>
     );
   }
@@ -84,9 +76,9 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-          <Header user={this.props.profile}/>
-          <NewsWidget news={this.props.news} />
-          <Feeds />
+        <Header user={this.props.profile}/>
+        <NewsWidget news={this.props.news} />
+        <Feeds />
       </div>
     );
   }
