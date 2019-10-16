@@ -2,7 +2,7 @@
 
 The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. If you are looking for a proper pattern to use it for your front end app we recommend looking at https://bitbucket.org/elmodevelopment/elmo-react-app/src/master/
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/app-component.jpg)
+![alt text](./doc/app-component.jpg)
 
 Review Note: In this repository we use a pattern called atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957) however using this pattern is not very incoreged. The concept of atomic design is about separation of components into atoms/molecules/organisms. However this kind of separation leaves your team always facing these questions: "Is this component an atom or a molecule?" Instead we think it is better to define and abstract your UI components in a more meaningful way. For example in ELMO UI components we group them based on their use cases (https://bitbucket.org/elmodevelopment/elmo-elements/src/master/).
 
@@ -31,7 +31,7 @@ The first group is called containers (it is also called State-full, smart or cla
 
 For example in our sample app we have one container component called Dashboard and it is located inside src/containers folder
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s1.jpg)
+![alt text](./doc/s1.jpg)
 
 This is the implementation of this container. You can see we use ES6 class to define it and that is why we call them class-based components.
 
@@ -45,7 +45,7 @@ class Dashboard extends React.Component {
 
 A container can also be consist of some other containers for example in our case we have another container called Feeds inside Dashboard container
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s2.jpg)
+![alt text](./doc/s2.jpg)
 
 ```javascript
 class Dashboard extends React.Component {
@@ -65,7 +65,7 @@ The second group is called components (it is also called State-less, dumb or fun
 
 For example in our app the Dashboard container is also consist of 2 dumb components. One is Header and one is NewsWidget
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s3.jpg)
+![alt text](./doc/s3.jpg)
 
 ```javascript
 class Dashboard extends React.Component {
@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
 
 The Feeds container is also consist of 2 dumb components. One is Posts and one is WritePost
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s4.jpg)
+![alt text](./doc/s4.jpg)
 
 This is the implementation of our Feeds container (Note: the connection to Redux is removed for simplicity)
 
@@ -112,7 +112,7 @@ const Posts = ({ posts, likePost }) => (
 );
 ```
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s5.jpg)
+![alt text](./doc/s5.jpg)
 
 ## Atomic Design
 
@@ -121,7 +121,7 @@ We can continue and break our app to smaller dumb, logic less, and state less co
 However we can see some of these components are much more smaller and reusable than others. For example a Button or Icon component can be implemented as a share library component and can be used by many single page application project across our company.
 We use a concept called Atomic Design to break the components to more reusable smaller components.
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/atomic.png)
+![alt text](./doc/atomic.png)
 
 http://bradfrost.com/blog/post/atomic-web-design/
 
@@ -131,7 +131,7 @@ https://arc.js.org/
 
 "We’re not designing pages, we’re designing systems of components.—Stephen Hay"
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/s6.jpg)
+![alt text](./doc/s6.jpg)
 
 For example you can see for this application we implemented the building blocks of our components as atoms, molecules and organisms. An atom component is the final small and reusable pieces of UI element that can not be divided into smaller part. For example a Button or Icon.
 
@@ -249,11 +249,11 @@ In our example app I have created a story for each atomic component. For example
 
 ### Icon atom
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/st1.png)
+![alt text](./doc/st1.png)
 
 ### Post organisms
 
-![alt text](https://bitbucket.org/elmolearning/react-example-saman/src/master/doc/st2.png)
+![alt text](./doc/st2.png)
 
 ### Sample of Button story
 
