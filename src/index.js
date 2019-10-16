@@ -1,13 +1,13 @@
-import ReactDOM from 'react-dom';
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import './index.css';
+import ReactDOM from "react-dom";
+import React, { Component } from "react";
+import { Provider } from "react-redux";
+import "./index.css";
 
 // Import story
-import store from './redux/store';
+import store from "./redux/store";
 
 // Import AppRoute
-import AppRoute from './route';
+import AppRoute from "./route";
 
 class App extends Component {
   render() {
@@ -19,4 +19,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

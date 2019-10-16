@@ -1,16 +1,16 @@
-import { css } from 'glamor'
+import { css } from "glamor";
 
 export const getTextStyle = () => {
   return css({
-    verticalAlign: 'super',
+    verticalAlign: "super"
   });
-}
+};
 
-export const getWrapperStyle = (color) => {
+export const getWrapperStyle = color => {
   return css({
     color: color,
-    paddingLeft: '5px',
-    paddingRight: '10px',
-    textDecoration: 'none',
+    paddingLeft: "5px",
+    paddingRight: "10px",
+    textDecoration: "none"
   });
-}
+};

@@ -1,4 +1,4 @@
-import users from '../fixtures/network';
+import users from "../fixtures/network";
 
 /**
  * Mock api
@@ -7,7 +7,7 @@ export const asyncFetchUser = (userId, callBack) => {
   setTimeout(() => {
     callBack(helperFindUser(userId));
   }, 500);
-}
+};
 
 /**
  *

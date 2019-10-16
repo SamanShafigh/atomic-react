@@ -1,20 +1,18 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Grid from './';
-import Cell from '../Cell';
-import ProfileImage from '../../molecules/ProfileImage';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Grid from "./";
+import Cell from "../Cell";
+import ProfileImage from "../../molecules/ProfileImage";
 
-const story = storiesOf('Grid', module);
+const story = storiesOf("Grid", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
-      <Grid>
-        Default Grid
-      </Grid>
+    <Grid>Default Grid</Grid>
   </div>
 ));
 
-story.add('with cell', () => (
+story.add("with cell", () => (
   <div>
     <Grid>
       <Cell>cell 1.1</Cell>
@@ -29,7 +27,7 @@ story.add('with cell', () => (
   </div>
 ));
 
-story.add('with cell and profile', () => (
+story.add("with cell and profile", () => (
   <div>
     <Grid>
       <Cell>cell 3.1</Cell>

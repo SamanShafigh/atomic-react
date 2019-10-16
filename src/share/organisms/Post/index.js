@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getPostStyle, getPostFooterStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { getPostStyle, getPostFooterStyle } from "./style.js";
 
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
-import ProfileInfo from '../../molecules/ProfileInfo';
-import Icon from '../../atoms/Icon';
-import Divider from '../../atoms/Divider';
-import Loading from '../../atoms/Loading';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
+import ProfileInfo from "../../molecules/ProfileInfo";
+import Icon from "../../atoms/Icon";
+import Divider from "../../atoms/Divider";
+import Loading from "../../atoms/Loading";
 
 const Post = ({ post, likePost, dislikePost, openPostComments }) => (
   <div>
@@ -25,9 +25,7 @@ const Post = ({ post, likePost, dislikePost, openPostComments }) => (
     <Grid>
       <Cell>
         <Loading isLoading={post.isPosting} />
-        <span className={getPostStyle()}>
-          {post.summary}
-        </span>
+        <span className={getPostStyle()}>{post.summary}</span>
       </Cell>
     </Grid>
     <Grid>
@@ -59,8 +57,8 @@ const Post = ({ post, likePost, dislikePost, openPostComments }) => (
 
 Post.propTypes = {
   likePost: PropTypes.func,
-	dislikePost: PropTypes.func,
-	openPostComments: PropTypes.func,
+  dislikePost: PropTypes.func,
+  openPostComments: PropTypes.func,
   post: PropTypes.shape({
     id: PropTypes.number,
     summary: PropTypes.string,
@@ -71,14 +69,14 @@ Post.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       email: PropTypes.string,
-      img: PropTypes.string,
+      img: PropTypes.string
     }),
-		isPosting: PropTypes.bool,
-  }),
-}
+    isPosting: PropTypes.bool
+  })
+};
 
 Post.defaultProps = {
-  isPosting: false,
-}
+  isPosting: false
+};
 
 export default Post;

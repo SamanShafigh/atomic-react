@@ -1,13 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Cell from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Cell from "./";
 
-const story = storiesOf('Cell', module);
+const story = storiesOf("Cell", module);
 
-story.add('sizes', () => (
+story.add("sizes", () => (
   <div>
-      <Cell>
-        Default Cell
-      </Cell>
+    <Cell>Default Cell</Cell>
   </div>
 ));

@@ -1,10 +1,10 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Textarea from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Textarea from "./";
 
-const story = storiesOf('Textarea', module);
+const story = storiesOf("Textarea", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
     <div>
       <Textarea onClick={() => {}} value="Sample data" />

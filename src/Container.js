@@ -1,4 +1,4 @@
-import componentsConfig from './config/Components';
+import componentsConfig from "./config/Components";
 
 class Container {
   constructor() {
@@ -7,7 +7,9 @@ class Container {
 
     for (var i = 0; i < componentsConfig.length; i++) {
       let componentConfig = componentsConfig[i];
-      this.components[componentConfig.name] = require(`${componentConfig.path}`).default;
+      this.components[
+        componentConfig.name
+      ] = require(`${componentConfig.path}`).default;
     }
   }
 

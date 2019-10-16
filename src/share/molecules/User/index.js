@@ -1,22 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   getUserContainerStyle,
   getUserNameStyle,
   getUserImageStyle,
   getUserNameLinkStyle,
   getUserOccupationStyle
-} from './style.js';
+} from "./style.js";
 
-import ProfileImage from '../ProfileImage';
+import ProfileImage from "../ProfileImage";
 
-const User = ({
-  fetchUser,
-  id,
-  name,
-  img,
-  occupation
-}) => (
+const User = ({ fetchUser, id, name, img, occupation }) => (
   <div className={getUserContainerStyle()}>
     <div className={getUserImageStyle()}>
       <ProfileImage url={img} title={name} />
@@ -35,7 +29,7 @@ User.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  occupation: PropTypes.string,
-}
+  occupation: PropTypes.string
+};
 
 export default User;

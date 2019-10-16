@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Checkbox from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Checkbox from "./";
 
-const story = storiesOf('Checkbox', module);
+const story = storiesOf("Checkbox", module);
 
 class CheckboxWrapper extends React.Component {
   constructor() {
@@ -10,7 +10,7 @@ class CheckboxWrapper extends React.Component {
     this.handleCheckbox = this.handleCheckbox.bind(this);
     this.state = {
       checked: true
-    }
+    };
   }
 
   handleCheckbox() {
@@ -18,14 +18,18 @@ class CheckboxWrapper extends React.Component {
     this.setState({ checked });
   }
 
-  render () {
+  render() {
     return (
-      <Checkbox id="my-checkbox" checked={this.state.checked} onChange={this.handleCheckbox} />
+      <Checkbox
+        id="my-checkbox"
+        checked={this.state.checked}
+        onChange={this.handleCheckbox}
+      />
     );
   }
 }
 
-story.add('Functional checkbox', () => (
+story.add("Functional checkbox", () => (
   <div>
     <CheckboxWrapper />
   </div>

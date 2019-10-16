@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import ProfileInfo from '../../share/organisms/ProfileInfo';
-import Modal from '../../share/molecules/Modal';
-import Grid from '../../share/atoms/Grid';
-import Cell from '../../share/atoms/Cell';
+import ProfileInfo from "../../share/organisms/ProfileInfo";
+import Modal from "../../share/molecules/Modal";
+import Grid from "../../share/atoms/Grid";
+import Cell from "../../share/atoms/Cell";
 
 const UserModal = ({ user, closeUserModal }) => (
-  <Modal isVisible={ user.loaded } onCancel={ closeUserModal }>
+  <Modal isVisible={user.loaded} onCancel={closeUserModal}>
     <Grid>
       <Cell>
         <ProfileInfo
@@ -32,9 +32,9 @@ UserModal.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       email: PropTypes.string,
-      img: PropTypes.string,
-    }),
-  }),
-}
+      img: PropTypes.string
+    })
+  })
+};
 
 export default UserModal;

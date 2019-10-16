@@ -1,19 +1,19 @@
-import { css } from 'glamor'
+import { css } from "glamor";
 
 /**
  *
  * @param styles
  * @returns {*}
  */
-const baseStyle = (options) => {
+const baseStyle = options => {
   const styles = Object.keys(options).reduce((p, c) => {
     const value = options[c];
     if (!value) return p;
 
-    if (c === 'size') {
+    if (c === "size") {
       return Object.assign(p, {
         flexGrow: value,
-        flexShrink: 12 / parseInt(value, 10),
+        flexShrink: 12 / parseInt(value, 10)
       });
     }
 
@@ -22,15 +22,13 @@ const baseStyle = (options) => {
 
   return css(
     Object.assign({}, styles, {
-      fontFamily: 'sans-serif',
-      margin: '1px',
-      fontSize: '14px',
-      color: '#424242',
-      label: 'cell',
-      flexBasis: 'auto',
-      alignSelf: 'center',
-      display: 'flex',
-      //border: '1px solid',
+      fontFamily: "sans-serif",
+      margin: "1px",
+      fontSize: "14px",
+      color: "#424242",
+      label: "cell",
+      alignSelf: "flex-start",
+      display: "flex"
     })
   );
 };
@@ -41,6 +39,6 @@ const baseStyle = (options) => {
  * @param isInactive
  * @returns {*}
  */
-export const getStyle = (options) => {
+export const getStyle = options => {
   return css(baseStyle(options));
 };

@@ -1,7 +1,7 @@
-import { css } from 'glamor'
+import { css } from "glamor";
 
 export const getConnectionStyle = () => {
   return css({
-    paddingLeft: '4px',
+    paddingLeft: "4px"
   });
-}
+};

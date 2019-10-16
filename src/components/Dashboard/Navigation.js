@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
-import { Link } from 'react-router';
-import Icon from '../../share/atoms/Icon';
+import { Link } from "react-router";
+import Icon from "../../share/atoms/Icon";
 
 const Navigation = ({ user }) => (
   <div className="navigation-header">
@@ -27,8 +27,8 @@ Navigation.propTypes = {
     connection: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
-  }),
-}
+    summary: PropTypes.string.isRequired
+  })
+};
 
 export default Navigation;

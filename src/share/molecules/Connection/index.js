@@ -1,13 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getConnectionStyle } from './style.js';
-import ProfileImage from '../ProfileImage';
+import React from "react";
+import PropTypes from "prop-types";
+import { getConnectionStyle } from "./style.js";
+import ProfileImage from "../ProfileImage";
 
-const Connection = ({
-  name,
-  img,
-  occupation
-}) => (
+const Connection = ({ name, img, occupation }) => (
   <span className={getConnectionStyle()}>
     <ProfileImage url={img} size="small" title={name} />
   </span>
@@ -16,7 +12,7 @@ const Connection = ({
 Connection.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  occupation: PropTypes.string,
-}
+  occupation: PropTypes.string
+};
 
 export default Connection;

@@ -1,14 +1,14 @@
-import Actions from '../../lib/constants/Actions';
-import { asyncFetchNews } from '../../apis/NewsApi';
+import Actions from "../../lib/constants/Actions";
+import { asyncFetchNews } from "../../apis/NewsApi";
 
 // async action to fetch user
 export function fetchNews() {
-  return (dispatch) => {
+  return dispatch => {
     dispatch({
-      type: Actions.NEWS_FETCH_DATA,
+      type: Actions.NEWS_FETCH_DATA
     });
 
-    asyncFetchNews((data) => dispatch(newsFetched(data)));
+    asyncFetchNews(data => dispatch(newsFetched(data)));
   };
 }
 
@@ -17,5 +17,5 @@ export function newsFetched(data) {
   return {
     type: Actions.NEWS_DATA_FETCHED,
     data
-  }
+  };
 }

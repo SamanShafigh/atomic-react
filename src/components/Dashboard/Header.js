@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
-import ProfileInfo from '../../share/organisms/ProfileInfo';
-import Navigation from './Navigation';
-import Grid from '../../share/atoms/Grid';
-import Cell from '../../share/atoms/Cell';
+import ProfileInfo from "../../share/organisms/ProfileInfo";
+import Navigation from "./Navigation";
+import Grid from "../../share/atoms/Grid";
+import Cell from "../../share/atoms/Cell";
 
 const Header = ({ user }) => (
   <div>
@@ -15,6 +15,7 @@ const Header = ({ user }) => (
       </Cell>
     </Grid>
     <Grid>
+      <Cell size="5"></Cell>
       <Cell>
         <ProfileInfo
           name={user.name}
@@ -26,6 +27,7 @@ const Header = ({ user }) => (
           link={`/profile/${user.id}`}
         />
       </Cell>
+      <Cell size="5"></Cell>
     </Grid>
   </div>
 );
@@ -38,8 +40,8 @@ Header.propTypes = {
     connection: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
-  }),
-}
+    summary: PropTypes.string.isRequired
+  })
+};
 
 export default Header;

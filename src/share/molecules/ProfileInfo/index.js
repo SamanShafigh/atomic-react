@@ -1,17 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getUserNameStyle, getUserEmailStyle, getUserInfoStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import {
+  getUserNameStyle,
+  getUserEmailStyle,
+  getUserInfoStyle
+} from "./style.js";
 
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
-import ProfileImage from '../ProfileImage';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
+import ProfileImage from "../ProfileImage";
 
-const ProfileInfo = ({
-  name,
-  email,
-  img,
-  size
-}) => (
+const ProfileInfo = ({ name, email, img, size }) => (
   <Grid>
     <Cell width="auto">
       <ProfileImage url={img} size="small" />
@@ -29,11 +28,11 @@ ProfileInfo.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-}
+  size: PropTypes.string.isRequired
+};
 
 ProfileInfo.defaultProps = {
-  size: 'default',
-}
+  size: "default"
+};
 
 export default ProfileInfo;

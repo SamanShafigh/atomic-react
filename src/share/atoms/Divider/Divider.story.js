@@ -1,11 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Divider from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Divider from "./";
 
-const story = storiesOf('Divider', module);
+const story = storiesOf("Divider", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
-      <Divider />
+    <Divider />
   </div>
 ));

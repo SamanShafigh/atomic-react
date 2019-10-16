@@ -1,6 +1,6 @@
 # Sample React App
 
-The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. If you looking for a proper pattern to use for implementing your front end app in ELMO we recommend looking at https://bitbucket.org/elmodevelopment/elmo-react-app/src/master/ 
+The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. If you are looking for a proper pattern to use it for your front end app we recommend looking at https://bitbucket.org/elmodevelopment/elmo-react-app/src/master/
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/app-component.jpg)
 
@@ -25,11 +25,9 @@ https://jaketrent.com/post/smart-dumb-components-react/
 
 https://preact.gitbooks.io/react-book/content/jsx/dumb.html
 
-
 ## First group (containers)
 
 The first group is called containers (it is also called State-full, smart or class based component). If we are not using Redux This containers are the places that we define the state of application and all the functionality that modifies this state. That is why we call them state-full or smart. However if we use Redux this components provide the connection to Redux action dispatchers and states by simply mapping actions and sates to props. Note that when we use Redux even the containers are relatively logicless.
-
 
 For example in our sample app we have one container component called Dashboard and it is located inside src/containers folder
 
@@ -40,9 +38,7 @@ This is the implementation of this container. You can see we use ES6 class to de
 ```javascript
 class Dashboard extends React.Component {
   render() {
-    return (
-      <div></div>
-    );
+    return <div></div>;
   }
 }
 ```
@@ -76,7 +72,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Header user={this.props.profile}/>
+        <Header user={this.props.profile} />
         <NewsWidget news={this.props.news} />
         <Feeds />
       </div>
@@ -89,7 +85,6 @@ The Feeds container is also consist of 2 dumb components. One is Posts and one i
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s4.jpg)
 
-
 This is the implementation of our Feeds container (Note: the connection to Redux is removed for simplicity)
 
 ```javascript
@@ -97,14 +92,8 @@ class Feeds extends React.Component {
   render() {
     return (
       <div>
-        <WritePost
-          user={this.props.profile}
-          addPost={this.props.addPost}
-        />
-        <Posts
-          posts={this.props.posts}
-          likePost={this.props.likePost}
-        />
+        <WritePost user={this.props.profile} addPost={this.props.addPost} />
+        <Posts posts={this.props.posts} likePost={this.props.likePost} />
       </div>
     );
   }
@@ -116,19 +105,14 @@ And this is the implementation of our dumb or function based component. You can 
 ```javascript
 const Posts = ({ posts, likePost }) => (
   <Panel title="Today feeds" icon="ic_question_answer">
-    {posts.map((post) => (
-        <Post
-          post={post}
-          key={post.id}
-          likePost={likePost}
-        />
-      ))}
+    {posts.map(post => (
+      <Post post={post} key={post.id} likePost={likePost} />
+    ))}
   </Panel>
 );
 ```
 
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/s5.jpg)
-
 
 ## Atomic Design
 
@@ -201,20 +185,12 @@ Button atom
 Icon atom
 ```
 
-
 [Profile image molecules]
-
 
 This is how the implementation of button atom component looks like. Note that in this project I have not used any CSS library. Each component implements its style with java script. We used a library called Glamor https://github.com/threepointone/glamor which allow us to define css in javascript. You can read more about it on the web
 
 ```javascript
-const Button = ({
-  onClick,
-  children,
-  type,
-  size,
-  disabled = false,
-}) => (
+const Button = ({ onClick, children, type, size, disabled = false }) => (
   <button type={type} onClick={onClick} className={getStyle(size, disabled)}>
     {children}
   </button>
@@ -224,10 +200,10 @@ const Button = ({
 A more complex UI element for example in our project is single Post and this is how we implemented it. You can see the function for liking is pass to this component as props and the only thing this component will do is to handle the user click interaction on the Like icon "onClick={() => likePost(post.id)}". You can see this component does not know anything about how the likePost function is implemented or even what exactly it will do.
 
 ```javascript
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
-import ProfileInfo from '../../molecules/ProfileInfo';
-import Icon from '../../atoms/Icon';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
+import ProfileInfo from "../../molecules/ProfileInfo";
+import Icon from "../../atoms/Icon";
 
 const Post = ({ post, likePost, dislikePost }) => (
   <div>
@@ -263,7 +239,6 @@ const Post = ({ post, likePost, dislikePost }) => (
 
 After we build all of these UI components we can easily use them inside our app or across other projects.
 
-
 ## Story Book
 
 Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.
@@ -273,45 +248,45 @@ https://github.com/storybooks/storybook
 In our example app I have created a story for each atomic component. For example the story of a Icon atom or Post organisms is like this
 
 ### Icon atom
+
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/st1.png)
 
 ### Post organisms
+
 ![alt text](https://github.com/SamanShafigh/atomic-react/blob/master/doc/st2.png)
 
 ### Sample of Button story
 
 ```javascript
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Button from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Button from "./";
 
-const story = storiesOf('Button', module);
+const story = storiesOf("Button", module);
 
-story.add('sizes', () => (
+story.add("sizes", () => (
   <div>
-      <Button onClick={() => {}}>
-        Default
-      </Button>
+    <Button onClick={() => {}}>Default</Button>
 
-      <Button type="primary" size="small" onClick={() => {}}>
-        Small
-      </Button>
+    <Button type="primary" size="small" onClick={() => {}}>
+      Small
+    </Button>
 
-      <Button type="primary" size="large" onClick={() => {}}>
-        Large
-      </Button>
+    <Button type="primary" size="large" onClick={() => {}}>
+      Large
+    </Button>
   </div>
 ));
 
-story.add('active/disable', () => (
+story.add("active/disable", () => (
   <div>
-      <Button type="primary" onClick={() => {}}>
-        Active Button
-      </Button>
+    <Button type="primary" onClick={() => {}}>
+      Active Button
+    </Button>
 
-      <Button type="primary" disabled onClick={() => {}}>
-        Disable Button
-      </Button>
+    <Button type="primary" disabled onClick={() => {}}>
+      Disable Button
+    </Button>
   </div>
 ));
 ```

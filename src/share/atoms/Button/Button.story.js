@@ -1,29 +1,32 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import Button from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import Button from "./";
 
-const story = storiesOf('Button', module);
+const story = storiesOf("Button", module);
 
-story.add('sizes', () => (
+story.add("sizes", () => (
   <div>
     <div>
-      <Button onClick={() => {}}>
-        Default
-      </Button>
-      <br /><br />
+      <Button onClick={() => {}}>Default</Button>
+      <br />
+      <br />
     </div>
 
     <div>
       <Button type="primary" size="small" onClick={() => {}}>
         Small
-      </Button><br /><br />
+      </Button>
+      <br />
+      <br />
     </div>
 
     <div>
       <Button type="primary" size="large" onClick={() => {}}>
         Large
-      </Button><br /><br />
+      </Button>
+      <br />
+      <br />
     </div>
 
     <pre>{`
@@ -48,7 +51,7 @@ story.add('sizes', () => (
   </div>
 ));
 
-story.add('active/disable', () => (
+story.add("active/disable", () => (
   <div>
     <div>
       <Button type="primary" onClick={() => {}}>
@@ -61,6 +64,5 @@ story.add('active/disable', () => (
         Disable Button
       </Button>
     </div>
-
   </div>
 ));

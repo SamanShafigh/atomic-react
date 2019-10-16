@@ -1,4 +1,4 @@
-import { css } from 'glamor'
+import { css } from "glamor";
 
 /**
  *
@@ -7,17 +7,17 @@ import { css } from 'glamor'
  */
 export const getUserNameStyle = () => {
   return css({
-    textAlign: 'center',
-    fontWeight: 'bold',
-    display: 'block',
+    textAlign: "center",
+    fontWeight: "bold",
+    display: "block"
   });
 };
 
 export const getUserSummaryStyle = () => {
   return css({
-    display: 'block',
-    textAlign: 'center',
-    color: '#888888',
-    paddingBottom: '20px',
+    display: "block",
+    textAlign: "center",
+    color: "#888888",
+    paddingBottom: "20px"
   });
 };

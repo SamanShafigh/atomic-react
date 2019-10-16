@@ -1,11 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Icon from './';
-import icons from './icons'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Icon from "./";
+import icons from "./icons";
 
-const story = storiesOf('Icon', module);
+const story = storiesOf("Icon", module);
 
-story.add('size', () => (
+story.add("size", () => (
   <div>
     <Icon size="21" />
     <Icon size="34" />
@@ -15,7 +15,7 @@ story.add('size', () => (
   </div>
 ));
 
-story.add('color', () => (
+story.add("color", () => (
   <div>
     <Icon size="55" />
     <Icon size="55" color="#2874A6" />
@@ -35,10 +35,10 @@ story.add('color', () => (
   </div>
 ));
 
-story.add('type', () => (
+story.add("type", () => (
   <div>
-    {Object.keys(icons).map((icon) => (
-       <Icon size="33" name={icon} title={icon} />
+    {Object.keys(icons).map(icon => (
+      <Icon size="33" name={icon} title={icon} />
     ))}
   </div>
 ));

@@ -1,10 +1,10 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Input from './';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Input from "./";
 
-const story = storiesOf('Input', module);
+const story = storiesOf("Input", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
     <div>
       <Input onClick={() => {}} value="Sample data" />

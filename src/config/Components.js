@@ -1,13 +1,14 @@
 export default [
   {
-    name:'A',
-    path:'./components/Dynamic/A'
+    name: "A",
+    path: "./components/Dynamic/A"
   },
   {
-    name:'B',
-    path:'./components/Dynamic/B'
+    name: "B",
+    path: "./components/Dynamic/B"
   },
   {
-    name:'C',
-    path:'./components/Dynamic/C'
-  }];
+    name: "C",
+    path: "./components/Dynamic/C"
+  }
+];

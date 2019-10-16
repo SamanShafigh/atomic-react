@@ -1,15 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { fetchUser, closeUserModal } from '../redux/actions/user';
-import Users from '../components/Network/Users';
-import UserModal from '../components/Network/UserModal';
+import React from "react";
+import { connect } from "react-redux";
+import { fetchUser, closeUserModal } from "../redux/actions/user";
+import Users from "../components/Network/Users";
+import UserModal from "../components/Network/UserModal";
 
 class Network extends React.Component {
   render() {
     return (
       <div>
-          <UserModal user={this.props.user} closeUserModal={this.props.closeUserModal} />
-          <Users users={this.props.users} fetchUser={this.props.fetchUser} />
+        <UserModal
+          user={this.props.user}
+          closeUserModal={this.props.closeUserModal}
+        />
+        <Users users={this.props.users} fetchUser={this.props.fetchUser} />
       </div>
     );
   }
@@ -17,7 +20,7 @@ class Network extends React.Component {
 
 const mapStateToProps = state => ({
   users: state.network,
-  user: state.user,
+  user: state.user
 });
 
 const mapDispatchToProps = {
@@ -25,4 +28,7 @@ const mapDispatchToProps = {
   closeUserModal
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Network);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Network);

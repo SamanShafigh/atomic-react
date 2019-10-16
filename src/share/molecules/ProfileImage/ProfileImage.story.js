@@ -1,11 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import ProfileImage from './';
-import user from '../../../fixtures/user';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import ProfileImage from "./";
+import user from "../../../fixtures/user";
 
-const story = storiesOf('Profile Image', module);
+const story = storiesOf("Profile Image", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
     <ProfileImage url="static/profile/a.jpg" />
     <ProfileImage url="static/profile/b.jpg" />
@@ -17,8 +17,7 @@ story.add('default', () => (
   </div>
 ));
 
-
-story.add('size', () => (
+story.add("size", () => (
   <div>
     <ProfileImage url="static/profile/g.jpg" size="small" />
     <ProfileImage url="static/profile/g.jpg" />

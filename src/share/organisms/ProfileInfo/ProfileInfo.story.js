@@ -1,11 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import ProfileInfo from './';
-import user from '../../../fixtures/user';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import ProfileInfo from "./";
+import user from "../../../fixtures/user";
 
-const story = storiesOf('Default Profile Info', module);
+const story = storiesOf("Default Profile Info", module);
 
-story.add('default', () => (
+story.add("default", () => (
   <div>
     <ProfileInfo
       name={user.name}

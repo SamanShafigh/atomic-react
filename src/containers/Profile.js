@@ -1,9 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import Connections from '../components/User/Connections';
-import Experiences from '../components/User/Experiences';
-import Recommendations from '../components/User/Recommendations';
+import Connections from "../components/User/Connections";
+import Experiences from "../components/User/Experiences";
+import Recommendations from "../components/User/Recommendations";
 
 class Profile extends React.Component {
   render() {
@@ -11,19 +11,21 @@ class Profile extends React.Component {
 
     return (
       <div>
-        <Connections friends={ user.friends } />
-        <Experiences experiences={ user.experiences } />
-        <Recommendations recommendations={ user.recommendations } />
+        <Connections friends={user.friends} />
+        <Experiences experiences={user.experiences} />
+        <Recommendations recommendations={user.recommendations} />
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  profile: state.profile
 });
 
-const mapDispatchToProps = {
-};
+const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Profile);

@@ -1,13 +1,13 @@
-import { css } from 'glamor'
+import { css } from "glamor";
 
 export const getPostStyle = () => {
   return css({
-    margin: '0.3em auto',
+    margin: "0.3em auto"
   });
-}
+};
 
 export const getPostFooterStyle = () => {
   return css({
-    color: '#ccc',
+    color: "#ccc"
   });
-}
+};

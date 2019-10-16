@@ -1,14 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { getStyle } from "./style.js";
 
-const Button = ({
-  onClick,
-  children,
-  type,
-  size,
-  disabled = false,
-}) => (
+const Button = ({ onClick, children, type, size, disabled = false }) => (
   <button type={type} onClick={onClick} className={getStyle(size, disabled)}>
     {children}
   </button>
@@ -20,12 +14,12 @@ Button.propTypes = {
   type: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool
-}
+};
 
 Button.defaultProps = {
-  type: 'submit',
-  size: 'medium',
+  type: "submit",
+  size: "medium",
   disabled: false
-}
+};
 
 export default Button;

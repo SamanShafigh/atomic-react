@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getTitleStyle, getDateStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { getTitleStyle, getDateStyle } from "./style.js";
 
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
-import Divider from '../../atoms/Divider';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
+import Divider from "../../atoms/Divider";
 
 const Experience = ({ experience }) => (
   <div>
@@ -15,9 +15,7 @@ const Experience = ({ experience }) => (
       </Cell>
     </Grid>
     <Grid>
-      <Cell>
-        {experience.summary}
-      </Cell>
+      <Cell>{experience.summary}</Cell>
     </Grid>
     <Grid>
       <Cell>
@@ -32,8 +30,8 @@ Experience.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     summary: PropTypes.string,
-    date: PropTypes.string,
+    date: PropTypes.string
   })
-}
+};
 
 export default Experience;

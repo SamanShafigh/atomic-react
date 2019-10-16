@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { getStyle } from "./style.js";
 
-const getSize = (size) => {
+const getSize = size => {
   const sizes = {
     default: 80,
     small: 50,
@@ -14,27 +14,23 @@ const getSize = (size) => {
   }
 
   return sizes[size];
-}
+};
 
-const ProfileImage = ({
-  url,
-  size,
-  title
-}) => (
-  url !== undefined?
+const ProfileImage = ({ url, size, title }) =>
+  url !== undefined ? (
     <span className={getStyle(url, getSize(size))} title={title}></span>
-    :
+  ) : (
     <span></span>
-);
+  );
 
 ProfileImage.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
-  size: PropTypes.string,
-}
+  size: PropTypes.string
+};
 
 ProfileImage.defaultProps = {
-  size: 'default',
-}
+  size: "default"
+};
 
 export default ProfileImage;

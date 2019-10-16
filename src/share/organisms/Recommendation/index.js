@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
-import ProfileInfo from '../../molecules/ProfileInfo';
-import Divider from '../../atoms/Divider';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
+import ProfileInfo from "../../molecules/ProfileInfo";
+import Divider from "../../atoms/Divider";
 
 const Recommendation = ({ recommendation }) => (
   <div>
@@ -18,9 +18,7 @@ const Recommendation = ({ recommendation }) => (
       </Cell>
     </Grid>
     <Grid>
-      <Cell>
-        {recommendation.summary}
-      </Cell>
+      <Cell>{recommendation.summary}</Cell>
     </Grid>
     <Grid>
       <Cell>
@@ -38,9 +36,9 @@ Recommendation.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       email: PropTypes.string,
-      img: PropTypes.string,
-    }),
+      img: PropTypes.string
+    })
   })
-}
+};
 
 export default Recommendation;

@@ -1,18 +1,18 @@
-import network from '../../fixtures/network';
-import profile from '../../fixtures/profile';
+import network from "../../fixtures/network";
+import profile from "../../fixtures/profile";
 
 // create an object for the default data
 const state = {
   // This object keeps the status of app related to each state segment
   status: {
     posts: {
-			postId: null,
+      postId: null,
       loading: true,
       loaded: false,
-      commenting: false,
+      commenting: false
     },
     post: {},
-    network: {},
+    network: {}
   },
   // I think this type of defining `news` state object adds more complexity for reducer.
   // So I think it is better to keep `loaded` in `status` object and keep `news` just
@@ -21,12 +21,12 @@ const state = {
     data: [],
     loaded: false
   },
-	user: {
-		loading: false,
-		loaded: false,
-		data: {}
-	},
-	comments: [],
+  user: {
+    loading: false,
+    loaded: false,
+    data: {}
+  },
+  comments: [],
   profile,
   network,
   posts: []

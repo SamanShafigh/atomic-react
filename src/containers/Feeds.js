@@ -1,17 +1,16 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 import {
   fetchPosts,
   addPost,
   likePost,
-  dislikePost,
-} from '../redux/actions/posts'
+  dislikePost
+} from "../redux/actions/posts";
 
-import Posts from '../components/Post/Posts';
-import WritePost from '../components/Post/WritePost';
+import Posts from "../components/Post/Posts";
+import WritePost from "../components/Post/WritePost";
 
 class Feeds extends React.Component {
-
   componentDidMount() {
     this.props.fetchPosts();
   }
@@ -19,10 +18,7 @@ class Feeds extends React.Component {
   render() {
     return (
       <div>
-        <WritePost
-          user={this.props.profile}
-          addPost={this.props.addPost}
-        />
+        <WritePost user={this.props.profile} addPost={this.props.addPost} />
         <Posts
           posts={this.props.posts}
           likePost={this.props.likePost}
@@ -35,14 +31,17 @@ class Feeds extends React.Component {
 
 const mapStateToProps = state => ({
   posts: state.posts,
-  profile: state.profile,
+  profile: state.profile
 });
 
 const mapDispatchToProps = {
   fetchPosts,
   addPost,
   likePost,
-	dislikePost,
+  dislikePost
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Feeds);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Feeds);

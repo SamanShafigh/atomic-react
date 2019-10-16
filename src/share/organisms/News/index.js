@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getTitleStyle, getDateStyle } from './style.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { getTitleStyle, getDateStyle } from "./style.js";
 
-import Grid from '../../atoms/Grid';
-import Cell from '../../atoms/Cell';
+import Grid from "../../atoms/Grid";
+import Cell from "../../atoms/Cell";
 
 const News = ({ news }) => (
   <div>
@@ -26,8 +26,8 @@ News.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     summary: PropTypes.string,
-    date: PropTypes.string,
+    date: PropTypes.string
   })
-}
+};
 
 export default News;

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
+import React, { Component } from "react";
+import { Router, Route, IndexRoute } from "react-router";
 
-import { history } from '../redux/store';
+import { history } from "../redux/store";
 
 // Import containers
-import Dashboard from '../containers/Dashboard';
-import Feeds from '../containers/Feeds';
-import Profile from '../containers/Profile';
-import Network from '../containers/Network';
+import Dashboard from "../containers/Dashboard";
+import Feeds from "../containers/Feeds";
+import Profile from "../containers/Profile";
+import Network from "../containers/Network";
 
 class AppRoute extends Component {
   render() {
