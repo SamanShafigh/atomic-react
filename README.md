@@ -1,6 +1,6 @@
 # Sample React App
 
-The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. If you are looking for a proper pattern to use it for your front end app we recommend looking at https://bitbucket.org/elmodevelopment/elmo-react-app/src/master/
+The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. 
 
 ![alt text](./doc/app-component.jpg)
 
