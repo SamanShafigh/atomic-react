@@ -4,7 +4,7 @@ The aim of this repository is to demonstrate some of the concepts and patterns l
 
 ![alt text](./doc/app-component.jpg)
 
-Review Note: In this repository we use a pattern called atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957) however using this pattern is not very incoreged. The concept of atomic design is about separation of components into atoms/molecules/organisms. However this kind of separation leaves your team always facing these questions: "Is this component an atom or a molecule?" Instead we think it is better to define and abstract your UI components in a more meaningful way. For example in ELMO UI components we group them based on their use cases (https://bitbucket.org/elmodevelopment/elmo-elements/src/master/).
+Review Note: In this repository we use a pattern called atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957) however using this pattern is not incoreged. The concept of atomic design is about separation of components into atoms/molecules/organisms. However this kind of separation leaves your team always facing these questions: "Is this component an atom or a molecule?" 
 
 ## How to run
 
