@@ -1,10 +1,11 @@
+Review Note: In this repo I was trying to play with the concept of atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957). The concept of atomic design is about separation of components into atoms/molecules/organisms. However I think this kind of separation leaves your team always facing questions such as: "Is this component an atom or a molecule?" 
+
+
 # Sample React App
 
 The aim of this repository is to demonstrate some of the concepts and patterns like container/component, atomic components and state management like redux. You should use this repository only as a learning material to get onboard with React/Redux. 
 
 ![alt text](./doc/app-component.jpg)
-
-Review Note: In this repository we use a pattern called atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957) however using this pattern is not incoreged. The concept of atomic design is about separation of components into atoms/molecules/organisms. However this kind of separation leaves your team always facing these questions: "Is this component an atom or a molecule?" 
 
 ## How to run
 
