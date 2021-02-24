@@ -1,4 +1,4 @@
-Review Note: In this repo I was trying to play with the concept of atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957). The concept of atomic design is about separation of components into atoms/molecules/organisms. However I think this kind of separation leaves your team always facing questions such as: "Is this component an atom or a molecule?" 
+**Note**: In this repo I was trying to play with the concept of atomic design (https://codeburst.io/atomic-design-with-react-e7aea8152957). The concept of atomic design is about separation of components into atoms/molecules/organisms. However I think this kind of separation leaves your team always facing questions such as: "Is this component an atom or a molecule?" 
 
 
 # Sample React App
